@@ -7,123 +7,123 @@
 #include <QMimeData>
 
 /**
- * @class MyTableModel
- * @brief Собственная реализация класса QAbstractTableModel.
- * @details Отвечает за работу tableView.
+ *   MyTableModel
+ *    Собственная реализация класса QAbstractTableModel.
+ *   Отвечает за работу tableView.
  */
 class MyTableModel : public QAbstractTableModel
 {
     Q_OBJECT
 
-    /// @brief Кол-во столбцов
+    ///    Кол-во столбцов
     const int columnsNum;
 
-    /// @brief Список данных для строк в таблице
+    ///    Список данных для строк в таблице
     QList<Data> DataModelList;
 
 signals:
-    /// @brief Сигнал о прошедших изменениях данных в таблице
+    ///    Сигнал о прошедших изменениях данных в таблице
     void modelDataChanged();
 
 public:
-    /// @brief Контструктор по умолчанию
+    ///    Контструктор по умолчанию
     explicit MyTableModel(QObject *parent = nullptr);
 
-    /// @brief Метод, возвращающий кол-во строк в модели
+    ///    Метод, возвращающий кол-во строк в модели
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    /// @brief Метод, возвращающий кол-во столбиков в модели
+    ///    Метод, возвращающий кол-во столбиков в модели
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
     /**
-     * @brief Метод, возвращающий обработанные данные для отображения в таблице
-     * @param index Индекс ячейки в модели.
-     * @param role Роль (отображение, редактирование и тд).
-     * @return пустой QVariant, или данные для отображения
+     *    Метод, возвращающий обработанные данные для отображения в таблице
+     *   index Индекс ячейки в модели.
+     *   role Роль (отображение, редактирование и тд).
+     *   пустой QVariant, или данные для отображения
      */
     QVariant data(const QModelIndex &index, int role) const override;
 
     /**
-     * @brief Метод, возвращающий набор флагов ячейки
-     * @param index Индекс ячейки в модели.
-     * @return Набор активных флагов (параметров) ячейки
+     *    Метод, возвращающий набор флагов ячейки
+     *   index Индекс ячейки в модели.
+     *   Набор активных флагов (параметров) ячейки
      */
     Qt::ItemFlags flags(const QModelIndex &index) const override;
 
     /**
-     * @brief Метод, обновлящий данные в списке, после взаимодейсвтвия с ними через tableView
-     * @param index Индекс ячейки в таблице.
-     * @param value Значение, которое требуется установить
-     * @param role Роль (отображение, редактирование и тд.).
-     * @return успешно ли прошла установка данных
+     *    Метод, обновлящий данные в списке, после взаимодейсвтвия с ними через tableView
+     *   index Индекс ячейки в таблице.
+     *   value Значение, которое требуется установить
+     *   role Роль (отображение, редактирование и тд.).
+     *   успешно ли прошла установка данных
      */
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
     /**
-     * @brief Метод, возвращает сформированный заголовок
-     * @param section Столбец в таблице.
-     * @param orientation Ориентация (для определения строка/столбец).
-     * @param role Роль (отображение, редактирование и тд.). По умолчанию DisplayRole.
-     * @return Сформированный заголовок.
+     *    Метод, возвращает сформированный заголовок
+     *   section Столбец в таблице.
+     *   orientation Ориентация (для определения строка/столбец).
+     *   role Роль (отображение, редактирование и тд.). По умолчанию DisplayRole.
+     *   Сформированный заголовок.
      */
     QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
 
     /**
-     * @brief Метод, добавляющий новую строку в список данных.
-     * @param value Объект класса DataElement, по умолчанию пустой.
-     * @return bool Запись добавлена успешно.
+     *    Метод, добавляющий новую строку в список данных.
+     *   value Объект класса DataElement, по умолчанию пустой.
+     *   bool Запись добавлена успешно.
      */
     bool appendRow(const Data &value = Data());
 
     /**
-     * @brief Метод, удалияющий строку из списка данных.
-     * @param position Номер удаляемой строки.
-     * @return bool Запись удалена успешно.
+     *    Метод, удалияющий строку из списка данных.
+     *   position Номер удаляемой строки.
+     *   bool Запись удалена успешно.
      */
     bool removeRow(const int position);
 
     /**
-     * @brief Метод для получения записи из таблицы.
-     * @return DataElement данные.
+     *    Метод для получения записи из таблицы.
+     *   DataElement данные.
      */
     Data getDataFromTable(int);
 
-    /// @brief Очищает таблицу.
+    ///    Очищает таблицу.
     void dropTable();
     /**
-     * @brief Метод, перезаписывающий данные в заданной строке.
-     * @param row Строка, в которую нужно перезаписать данные.
-     * @param value DataElement, на который нужно сделать замену.
+     *    Метод, перезаписывающий данные в заданной строке.
+     *   row Строка, в которую нужно перезаписать данные.
+     *   value DataElement, на который нужно сделать замену.
      */
     void overWriteData(int row, const Data &value = Data());
 
     /**
-     * @brief Метод, возвращающий поддерживающиеся типы mime данных
-     * @return Список поддерживающихся типов mime данных
+     *    Метод, возвращающий поддерживающиеся типы mime данных
+     *   Список поддерживающихся типов mime данных
      */
     QStringList mimeTypes() const override;
 
     /**
-     * @brief Метод, формирующий создающий и формирующий mime данные при начале dragAndDrop
-     * @param indexes Выделенные индексы, которые следует поместить в mime данные
-     * @return Ссылка на объект QMimeData с обработанными данными
+     *    Метод, формирующий создающий и формирующий mime данные при начале dragAndDrop
+     *   indexes Выделенные индексы, которые следует поместить в mime данные
+     *   Ссылка на объект QMimeData с обработанными данными
      */
     QMimeData* mimeData(const QModelIndexList& indexes) const override;
 
     /**
-     * @brief Метод, обрабатывающий событие Drop (получения mime данных)
-     * @param data Указатель на получаемые mime данные
-     * @param action DropAction
-     * @param row Номер строки, куда производится drop
-     * @param column Номер столбца, куда производится drop
-     * @param parent Индекс, куда производится drop
-     * @return bool Успешно ли данные приняты
+     *    Метод, обрабатывающий событие Drop (получения mime данных)
+     *   data Указатель на получаемые mime данные
+     *   action DropAction
+     *   row Номер строки, куда производится drop
+     *   column Номер столбца, куда производится drop
+     *   parent Индекс, куда производится drop
+     *   bool Успешно ли данные приняты
      */
     bool dropMimeData(const QMimeData* data, Qt::DropAction action, int row, int column, const QModelIndex& parent) override;
 
     /**
-     * @brief Метод, обновляющий заголовки столбцов.
-     * @details Уведомляет QTableView о необходимости перерисовки заголовков.
+     *    Метод, обновляющий заголовки столбцов.
+     *   Уведомляет QTableView о необходимости перерисовки заголовков.
      */
     void updateHeaders();
 };
