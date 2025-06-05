@@ -96,7 +96,7 @@ void MainWindow::on_actionPaste_row_triggered()
     int currentRow = sortmodel->mapToSource(currentIndex).row();
     if (currentRow >= 0 && currentRow < model->rowCount()) {
         QString line = QApplication::clipboard()->text();
-        if (line.count(";") != 8) {
+        if (line.count(";") != 9) {
             QMessageBox::warning(this,
                                  tr("Unsupported Input Data Format"),
                                  tr("Data format is not supported.\nYou can paste only rows with 8 columns."));

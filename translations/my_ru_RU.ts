@@ -410,7 +410,7 @@ You can paste only rows with 8 columns.</source>
     <message>
         <source>Data format is not supported.
 You can paste only rows with 9 columns.</source>
-        <translation type="vanished">Формат данных не поддерживается.
+        <translation type="obsolete">Формат данных не поддерживается.
         Вы можете вставлять только строки с 9 столбцами.</translation>
     </message>
     <message>

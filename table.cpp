@@ -188,7 +188,7 @@ bool MyTableModel::dropMimeData(const QMimeData* data, Qt::DropAction action, in
         {
             QString line = data->text();
 
-            if(line.count(";") != 8)
+            if(line.count(";") != 9)
             {
                 QMessageBox msgBox(QMessageBox::Warning,
                                    tr("Unsupported Input Data Format"),
