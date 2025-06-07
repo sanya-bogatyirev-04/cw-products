@@ -11,8 +11,8 @@
 #include <QTextStream>
 #include <QSettings>
 #include <QModelIndex>
-#include <QPainter>
 #include <QFontMetrics>
+#include <QCloseEvent>
 #include <cmath>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -35,7 +35,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tableView->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui->tableView, &QWidget::customContextMenuRequested, this, &MainWindow::showCustomContextMenu);
 
-    grapf = new Grapf();
     find = new Find();
     connect(find, SIGNAL(findSignal(int, const QString&)), this, SLOT(findHandler(int, const QString&)));
     connect(find, SIGNAL(findclosed()), this, SLOT(findCloseHandler()));
@@ -76,7 +75,6 @@ void MainWindow::closeEvent(QCloseEvent *event)
     {
         saveSettings();
         if(find) find->close();
-        if(grapf) grapf->close();
         LanguageSwitch::GetInstance()->pop(this);
         event->accept();
     }
@@ -91,7 +89,6 @@ MainWindow::~MainWindow()
     delete model;
     delete sortmodel;
     delete find;
-    delete grapf;
     delete delegateFinansing;
     delete delegateActive;
     delete ui;
@@ -124,13 +121,11 @@ void MainWindow::on_actionNew_triggered()
     if(!suggestSaveFile())
         return;
     if(find) find->close();
-    if(grapf) grapf->close();
     model->dropTable();
     openedPath = "~untitled.db";
     somethingMightChanged = true;
     setStateWhenFileOpened(true);
     setDefaultHeadersSizes();
-    setNewWindowTitle();
     model->appendRow();
     ui->tableView->selectRow(0);
 }
@@ -150,14 +145,12 @@ void MainWindow::on_actionOpen_triggered()
     if(loadfile(filePath))
     {
         if(find) find->close();
-        if(grapf) grapf->close();
         openedPath = filePath;
         setStateWhenFileOpened(true);
         somethingMightChanged = false;
         ui->tableView->setCurrentIndex(sortmodel->sourceModel()->index(0,0));
         ui->tableView->selectRow(0);
         ui->tableView->resizeColumnsToContents();
-        setNewWindowTitle();
     }
 }
 
@@ -169,10 +162,8 @@ void MainWindow::on_actionClose_triggered()
     openedPath = "";
     model->dropTable();
     if(find) find->close();
-    if(grapf) grapf->close();
     somethingMightChanged = false;
     setStateWhenFileOpened(false);
-    setNewWindowTitle();
 }
 
 void MainWindow::on_actionExit_triggered()
@@ -189,7 +180,6 @@ void MainWindow::on_actionSave_triggered()
     }
 
     savefile(openedPath);
-    setNewWindowTitle();
 }
 
 void MainWindow::on_actionSave_as_triggered()
@@ -206,7 +196,6 @@ void MainWindow::on_actionSave_as_triggered()
     {
         if(openedPath == "~untitled.db")
             openedPath = filePath;
-        setNewWindowTitle();
     }
 }
 
@@ -223,10 +212,8 @@ void MainWindow::setStateWhenFileOpened(bool state)
     ui->actionFind->setEnabled(state);
     ui->actionSortDeny->setEnabled(state);
     ui->menuFilter->setEnabled(state);
-    ui->actionPrint->setEnabled(state);
     ui->actionSave->setEnabled(state);
     ui->actionPaste_row->setEnabled(state);
-    ui->actionGrapf->setEnabled(state);
 }
 
 void MainWindow::showCustomContextMenu(const QPoint& pos)
@@ -259,48 +246,10 @@ void MainWindow::on_actionSortDeny_triggered()
     sortmodel->sort(-1);
 }
 
-void MainWindow::on_actionNew_window_triggered()
-{
-    MainWindow *w = new MainWindow;
-    w->show();
-}
-
-void MainWindow::setNewWindowTitle()
-{
-    setWindowTitle(originalTitle);
-}
 
 void MainWindow::modelDataChanged()
 {
     somethingMightChanged = true;
-    setNewWindowTitle();
-    if(grapf->isVisible())
-    {
-        emit ui->actionGrapf->trigger();
-        grapf->update();
-    }
-}
-
-void MainWindow::on_actionGrapf_triggered()
-{
-    grapf->dropMapData();
-    int rows = model->rowCount();
-    bool emptyDataTable = true;
-
-    for (int row = 0; row < rows; ++row)
-    {
-        Data tempelem = model->getDataFromTable(row);
-        QString name = tempelem.getType();
-        double width = tempelem.getLenght();
-
-        if (width <= 0) continue;
-        if(emptyDataTable) emptyDataTable = false;
-        grapf->insertIntoMap(name, width);
-    }
-    if(emptyDataTable) return;
-    grapf->show();
-    grapf->activateWindow();
-    grapf->update();
 }
 
 void MainWindow::updateTableHeaders()

@@ -29,7 +29,6 @@ void LanguageSwitch::translateAll()
         mainWindow->retranslate();
         mainWindow->originalTitle = mainWindow->windowTitle();
         qDebug() << "New original title set:" << mainWindow->originalTitle;
-        mainWindow->setNewWindowTitle();
         qDebug() << "Window title after translation:" << mainWindow->windowTitle();
     }
 }

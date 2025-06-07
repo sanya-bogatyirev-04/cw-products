@@ -148,63 +148,6 @@ void MyTableModel::overWriteData(int row, const Data &value)
     layoutChanged();
 }
 
-QStringList MyTableModel::mimeTypes() const
-{
-    QStringList types;
-    types << "application/x-qabstractitemmodeldatalist";
-    types << "text/plain";
-    return types;
-}
-
-QMimeData* MyTableModel::mimeData(const QModelIndexList& indexes) const
-{
-    QMimeData* mimeData = new QMimeData;
-    QString outText = "";
-
-    for (const QModelIndex& index : indexes)
-    {
-        if (index.isValid())
-        {
-            QString text = this->data(index,Qt::DisplayRole).toString();
-            outText.append(text.toUtf8().append(";"));
-        }
-    }
-    outText.append('\n');
-    mimeData->setData("application/x-qabstractitemmodeldatalist", outText.toUtf8());
-    mimeData->setData("text/plain", outText.toUtf8());
-    return mimeData;
-}
-
-bool MyTableModel::dropMimeData(const QMimeData* data, Qt::DropAction action, int row, int column, const QModelIndex& parent)
-{
-    Q_UNUSED(action);
-    Q_UNUSED(column);
-    Q_UNUSED(row);
-
-    if (data->hasFormat("application/x-qabstractitemmodeldatalist") ||
-        data->hasFormat("text/plain"))
-    {
-        if (parent.isValid())
-        {
-            QString line = data->text();
-
-            if(line.count(";") != 9)
-            {
-                QMessageBox msgBox(QMessageBox::Warning,
-                                   tr("Unsupported Input Data Format"),
-                                   tr("Data format is not supported.\nYou can paste only rows."),
-                                   QMessageBox::Ok);
-                msgBox.exec();
-                return false;
-            }
-
-            this->overWriteData(parent.row(), Data(line));
-            return true;
-        }
-    }
-    return false;
-}
-
 void MyTableModel::updateHeaders()
 {
     emit headerDataChanged(Qt::Horizontal, 0, columnCount() - 1);

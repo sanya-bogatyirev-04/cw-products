@@ -98,30 +98,6 @@ public:
     void overWriteData(int row, const Data &value = Data());
 
     /**
-     *    Метод, возвращающий поддерживающиеся типы mime данных
-     *   Список поддерживающихся типов mime данных
-     */
-    QStringList mimeTypes() const override;
-
-    /**
-     *    Метод, формирующий создающий и формирующий mime данные при начале dragAndDrop
-     *   indexes Выделенные индексы, которые следует поместить в mime данные
-     *   Ссылка на объект QMimeData с обработанными данными
-     */
-    QMimeData* mimeData(const QModelIndexList& indexes) const override;
-
-    /**
-     *    Метод, обрабатывающий событие Drop (получения mime данных)
-     *   data Указатель на получаемые mime данные
-     *   action DropAction
-     *   row Номер строки, куда производится drop
-     *   column Номер столбца, куда производится drop
-     *   parent Индекс, куда производится drop
-     *   bool Успешно ли данные приняты
-     */
-    bool dropMimeData(const QMimeData* data, Qt::DropAction action, int row, int column, const QModelIndex& parent) override;
-
-    /**
      *    Метод, обновляющий заголовки столбцов.
      *   Уведомляет QTableView о необходимости перерисовки заголовков.
      */

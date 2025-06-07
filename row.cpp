@@ -99,7 +99,7 @@ void MainWindow::on_actionPaste_row_triggered()
         if (line.count(";") != 9) {
             QMessageBox::warning(this,
                                  tr("Unsupported Input Data Format"),
-                                 tr("Data format is not supported.\nYou can paste only rows with 8 columns."));
+                                 tr("Data format is not supported.\nYou can paste only rows with 9 columns."));
             return;
         }
         model->overWriteData(currentRow, Data(line));

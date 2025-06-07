@@ -32,8 +32,11 @@
       <property name="editTriggers">
        <set>QAbstractItemView::EditTrigger::AnyKeyPressed|QAbstractItemView::EditTrigger::DoubleClicked|QAbstractItemView::EditTrigger::EditKeyPressed</set>
       </property>
+      <property name="dragDropOverwriteMode">
+       <bool>false</bool>
+      </property>
       <property name="dragDropMode">
-       <enum>QAbstractItemView::DragDropMode::DragDrop</enum>
+       <enum>QAbstractItemView::DragDropMode::NoDragDrop</enum>
       </property>
       <property name="defaultDropAction">
        <enum>Qt::DropAction::IgnoreAction</enum>
@@ -74,7 +77,6 @@
     <addaction name="actionSave"/>
     <addaction name="actionSave_as"/>
     <addaction name="separator"/>
-    <addaction name="actionNew_window"/>
     <addaction name="actionExit"/>
    </widget>
    <widget class="QMenu" name="menuLanguage">
@@ -109,7 +111,6 @@
     <addaction name="actionFind"/>
     <addaction name="actionSortDeny"/>
     <addaction name="separator"/>
-    <addaction name="actionGrapf"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -239,30 +240,6 @@
   <action name="actionSortDeny">
    <property name="text">
     <string>Ruturn to original sorting</string>
-   </property>
-  </action>
-  <action name="actionNew_window">
-   <property name="text">
-    <string>New window</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+M</string>
-   </property>
-  </action>
-  <action name="actionPrint">
-   <property name="text">
-    <string>Print</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+P</string>
-   </property>
-  </action>
-  <action name="actionGrapf">
-   <property name="text">
-    <string>Grapf</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+G</string>
    </property>
   </action>
  </widget>

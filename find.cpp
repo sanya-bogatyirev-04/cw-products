@@ -40,7 +40,6 @@ void Find::setNewWindowName(QString parentPart)
     QString windowname = orginalTitle + tr(" in ");
     windowname += parentPart;
     setWindowTitle(windowname);
-
 }
 
 void Find::on_lineEdit_textChanged(const QString &arg1)

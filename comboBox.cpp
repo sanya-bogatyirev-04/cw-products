@@ -32,14 +32,6 @@ void ComboBox::setEditorData(QWidget *editor, const QModelIndex &index) const
     comboBox->setCurrentText(index.data().toString());
 }
 
-void ComboBox::setModelData(
-        QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
-{
-    QComboBox *comboBox = qobject_cast<QComboBox *>(editor);
-    // Определяем текущий выбор пользователя для вставки в таблицу
-    model->setData(index, comboBox->currentText());
-}
-
 void ComboBox::setData(const QStringList &strList)
 {
     // Зададим варианты для вывода в выпадающем списке comboBox

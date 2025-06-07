@@ -38,16 +38,6 @@ public:
     void setEditorData(QWidget *editor,
                        const QModelIndex &index) const override;
 
-    /**
-      *   Метод для передачи значения из виджета-редактора в таблицу
-      *   editor Указатель на редактор.
-      *   model Указатель на данные.
-      *   index Индекс ячейки.
-      */
-    void setModelData(QWidget *editor,
-                      QAbstractItemModel *model,
-                      const QModelIndex &index) const override;
-
     ///   Метод, устанавливающий значения в listOptions.
     void setData(const QStringList &strList);
 };

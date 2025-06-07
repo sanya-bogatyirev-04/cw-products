@@ -5,7 +5,6 @@ debug/data.o
 debug/file.o
 debug/find.o
 debug/findWindow.o
-debug/grapf.o
 debug/language.o
 debug/languageSwitch.o
 debug/main.o
@@ -16,6 +15,5 @@ debug/moc_authorAbout.o
 debug/moc_comboBox.o
 debug/moc_table.o
 debug/moc_find.o
-debug/moc_grapf.o
 debug/moc_languageSwitch.o
 debug/moc_mainwindow.o

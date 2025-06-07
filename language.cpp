@@ -16,7 +16,6 @@ void MainWindow::retranslate()
 {
     ui->retranslateUi(this); // Переводик интерфейс
     find->retranslate(); // Переводим окно поиска
-    grapf->retranslate(); // Переводим окно графика
 }
 
 

@@ -5,7 +5,6 @@ release/data.o
 release/file.o
 release/find.o
 release/findWindow.o
-release/grapf.o
 release/language.o
 release/languageSwitch.o
 release/main.o
@@ -16,6 +15,5 @@ release/moc_authorAbout.o
 release/moc_comboBox.o
 release/moc_table.o
 release/moc_find.o
-release/moc_grapf.o
 release/moc_languageSwitch.o
 release/moc_mainwindow.o

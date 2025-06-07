@@ -16,7 +16,6 @@ SOURCES += \
     file.cpp \
     find.cpp \
     findWindow.cpp \
-    grapf.cpp \
     language.cpp \
     languageSwitch.cpp \
     main.cpp \
@@ -29,14 +28,12 @@ HEADERS += \
     table.hpp \
     data.hpp \
     find.h \
-    grapf.h \
     languageSwitch.h \
     mainwindow.h
 
 FORMS += \
     authorAbout.ui \
     find.ui \
-    grapf.ui \
     mainwindow.ui
 
 # Default rules for deployment.

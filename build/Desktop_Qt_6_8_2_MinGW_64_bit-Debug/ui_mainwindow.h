@@ -42,9 +42,6 @@ public:
     QAction *actionFind;
     QAction *actionAutor;
     QAction *actionSortDeny;
-    QAction *actionNew_window;
-    QAction *actionPrint;
-    QAction *actionGrapf;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QTableView *tableView;
@@ -104,12 +101,6 @@ public:
         actionAutor->setObjectName("actionAutor");
         actionSortDeny = new QAction(MainWindow);
         actionSortDeny->setObjectName("actionSortDeny");
-        actionNew_window = new QAction(MainWindow);
-        actionNew_window->setObjectName("actionNew_window");
-        actionPrint = new QAction(MainWindow);
-        actionPrint->setObjectName("actionPrint");
-        actionGrapf = new QAction(MainWindow);
-        actionGrapf->setObjectName("actionGrapf");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -117,7 +108,8 @@ public:
         tableView = new QTableView(centralwidget);
         tableView->setObjectName("tableView");
         tableView->setEditTriggers(QAbstractItemView::EditTrigger::AnyKeyPressed|QAbstractItemView::EditTrigger::DoubleClicked|QAbstractItemView::EditTrigger::EditKeyPressed);
-        tableView->setDragDropMode(QAbstractItemView::DragDropMode::DragDrop);
+        tableView->setDragDropOverwriteMode(false);
+        tableView->setDragDropMode(QAbstractItemView::DragDropMode::NoDragDrop);
         tableView->setDefaultDropAction(Qt::DropAction::IgnoreAction);
         tableView->setAlternatingRowColors(true);
         tableView->setSelectionMode(QAbstractItemView::SelectionMode::SingleSelection);
@@ -157,7 +149,6 @@ public:
         menuFile->addAction(actionSave);
         menuFile->addAction(actionSave_as);
         menuFile->addSeparator();
-        menuFile->addAction(actionNew_window);
         menuFile->addAction(actionExit);
         menuLanguage->addAction(actionRussian);
         menuLanguage->addAction(actionEnglish);
@@ -172,7 +163,6 @@ public:
         menuFilter->addAction(actionFind);
         menuFilter->addAction(actionSortDeny);
         menuFilter->addSeparator();
-        menuFilter->addAction(actionGrapf);
 
         retranslateUi(MainWindow);
 
@@ -234,18 +224,6 @@ public:
 #endif // QT_CONFIG(shortcut)
         actionAutor->setText(QCoreApplication::translate("MainWindow", "Author", nullptr));
         actionSortDeny->setText(QCoreApplication::translate("MainWindow", "Ruturn to original sorting", nullptr));
-        actionNew_window->setText(QCoreApplication::translate("MainWindow", "New window", nullptr));
-#if QT_CONFIG(shortcut)
-        actionNew_window->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+M", nullptr));
-#endif // QT_CONFIG(shortcut)
-        actionPrint->setText(QCoreApplication::translate("MainWindow", "Print", nullptr));
-#if QT_CONFIG(shortcut)
-        actionPrint->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+P", nullptr));
-#endif // QT_CONFIG(shortcut)
-        actionGrapf->setText(QCoreApplication::translate("MainWindow", "Grapf", nullptr));
-#if QT_CONFIG(shortcut)
-        actionGrapf->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+G", nullptr));
-#endif // QT_CONFIG(shortcut)
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuLanguage->setTitle(QCoreApplication::translate("MainWindow", "Language", nullptr));
         menuAbout->setTitle(QCoreApplication::translate("MainWindow", "About", nullptr));

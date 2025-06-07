@@ -3,7 +3,6 @@
 
 #include "table.hpp"
 #include "comboBox.hpp"
-#include "grapf.h"
 #include "find.h"
 
 #include <QMainWindow>
@@ -14,7 +13,6 @@ namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
 class Find;
-class Grapf;
 
 /**
   *   MainWindow
@@ -123,17 +121,11 @@ private slots:
     */
     void findCloseHandler();
 
-    ///   Слот-обработчик открытия нового главного окна приложения.
-    void on_actionNew_window_triggered();
-
     /**
     *   Слот-обработчик изменения данных в модели.
     *   Меняет имя окна в состояние, что файл изменен, если открыт график, обновляет его и устанавливает значение, что файл быз изменен
     */
     void modelDataChanged();
-
-    ///   Слот-обработчик открытия окна с графиком.
-    void on_actionGrapf_triggered();
 
     /**
      *   Слот-обработчик для обновления заголовков таблицы.
@@ -213,17 +205,11 @@ private:
     ///   Ссылка на окно для поиска
     Find *find;
 
-    ///   Ссылка на окно для графика
-    Grapf *grapf;
-
     ///   Строка, хранящая путь к текущему открытому файлу
     QString openedPath = "";
 
     ///   Bool, отмечающий, были ли изменения в файле
     bool somethingMightChanged = false;
-
-    ///   Bool, говорящий, открыто ли окно графика
-    bool grapfActive = false;
 
     ///   Ссылка на делегат для столбца финансирования
     ComboBox *delegateFinansing;
