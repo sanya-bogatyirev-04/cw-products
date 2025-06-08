@@ -1,0 +1,53 @@
+\hypertarget{class_combo_box}{}\section{Combo\+Box Class Reference}
+\label{class_combo_box}\index{ComboBox@{ComboBox}}
+
+
+{\ttfamily \#include \char`\"{}combo\+Box.\+hpp\char`\"{}}
+
+
+
+Inherits Q\+Styled\+Item\+Delegate.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_combo_box_a2f76585fb600bb00ad3db90d0f578183}\label{class_combo_box_a2f76585fb600bb00ad3db90d0f578183}} 
+\mbox{\hyperlink{class_combo_box_a2f76585fb600bb00ad3db90d0f578183}{Combo\+Box}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию \end{DoxyCompactList}\item 
+Q\+Widget $\ast$ \mbox{\hyperlink{class_combo_box_a1fd453e6efcb87acddce5038e0b539df}{create\+Editor}} (Q\+Widget $\ast$parent, const Q\+Style\+Option\+View\+Item \&option, const Q\+Model\+Index \&index) const override
+\item 
+void \mbox{\hyperlink{class_combo_box_aeb2ad78f056f1d46f8ad43531df65581}{set\+Editor\+Data}} (Q\+Widget $\ast$editor, const Q\+Model\+Index \&index) const override
+\item 
+\mbox{\Hypertarget{class_combo_box_a6a25685870b74734a6fd5e3533ea6de6}\label{class_combo_box_a6a25685870b74734a6fd5e3533ea6de6}} 
+void \mbox{\hyperlink{class_combo_box_a6a25685870b74734a6fd5e3533ea6de6}{set\+Data}} (const Q\+String\+List \&str\+List)
+\begin{DoxyCompactList}\small\item\em Метод, устанавливающий значения в list\+Options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_combo_box_a1299211beaf0017a3216230014f51613}\label{class_combo_box_a1299211beaf0017a3216230014f51613}} 
+Q\+String\+List \mbox{\hyperlink{class_combo_box_a1299211beaf0017a3216230014f51613}{list\+Options}}
+\begin{DoxyCompactList}\small\item\em Переменная хранит список значений для выбора в combo\+Box. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_combo_box}{Combo\+Box}} Класс позволяет использовать Q\+Combo\+Box в качестве редактора ячеек 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_combo_box_a1fd453e6efcb87acddce5038e0b539df}\label{class_combo_box_a1fd453e6efcb87acddce5038e0b539df}} 
+\index{ComboBox@{ComboBox}!createEditor@{createEditor}}
+\index{createEditor@{createEditor}!ComboBox@{ComboBox}}
+\subsubsection{\texorpdfstring{createEditor()}{createEditor()}}
+{\footnotesize\ttfamily Q\+Widget $\ast$ Combo\+Box\+::create\+Editor (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent,  }\item[{const Q\+Style\+Option\+View\+Item \&}]{option,  }\item[{const Q\+Model\+Index \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Метод для создания виджета-\/редактора с объектом типа Q\+Combo\+Box parent Родительский виджет option Параметры index Индекс Указатель на созданный виджет \mbox{\Hypertarget{class_combo_box_aeb2ad78f056f1d46f8ad43531df65581}\label{class_combo_box_aeb2ad78f056f1d46f8ad43531df65581}} 
+\index{ComboBox@{ComboBox}!setEditorData@{setEditorData}}
+\index{setEditorData@{setEditorData}!ComboBox@{ComboBox}}
+\subsubsection{\texorpdfstring{setEditorData()}{setEditorData()}}
+{\footnotesize\ttfamily void Combo\+Box\+::set\+Editor\+Data (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{editor,  }\item[{const Q\+Model\+Index \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Метод для передачи значения из в таблицы в виджет-\/редактор editor Указатель на редактор. index Индекс ячейки. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+combo\+Box.\+hpp\item 
+combo\+Box.\+cpp\end{DoxyCompactItemize}

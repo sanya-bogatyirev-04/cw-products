@@ -1,0 +1,127 @@
+\hypertarget{class_language_switch}{}\section{Language\+Switch Class Reference}
+\label{class_language_switch}\index{LanguageSwitch@{LanguageSwitch}}
+
+
+{\ttfamily \#include \char`\"{}language\+Switch.\+h\char`\"{}}
+
+
+
+Inherits Q\+Object.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_language_switch_ab97b59217547f4ac359b80132a41002b}{append}} (\mbox{\hyperlink{class_main_window}{Main\+Window}} $\ast$window)
+\item 
+void \mbox{\hyperlink{class_language_switch_ad3507c437b4a165484a385f6afe3882d}{pop}} (\mbox{\hyperlink{class_main_window}{Main\+Window}} $\ast$window)
+\item 
+void \mbox{\hyperlink{class_language_switch_a771b7ad7302497cff07d2c22c32974a1}{translate\+All}} ()
+\item 
+void \mbox{\hyperlink{class_language_switch_abbeea6d84e165377ab4d2707d013ad8f}{load\+App\+Translator}} (Q\+String locale)
+\item 
+void \mbox{\hyperlink{class_language_switch_a94b3b12b84af0f4eee8b2b90cbd1cebc}{load\+Qt\+Translator}} (Q\+String locale)
+\item 
+void \mbox{\hyperlink{class_language_switch_a3ee3f692430ab7bb6337dddc9dfc35cd}{set\+App\+Language}} (Q\+String locale)
+\item 
+Q\+String \mbox{\hyperlink{class_language_switch_a64444b644fb7f7a0612998d40928a8fc}{get\+App\+Language}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_language_switch}{Language\+Switch}} $\ast$ \mbox{\hyperlink{class_language_switch_a3fb95c9db6175a4911766462bb141ec9}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_language_switch_aaaf776c062ae2690092a674e7e5efdd1}{Language\+Switch}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_language_switch_a81714c79a3e66c0b03a604c902ab1468}\label{class_language_switch_a81714c79a3e66c0b03a604c902ab1468}} 
+Q\+List$<$ \mbox{\hyperlink{class_main_window}{Main\+Window}} $\ast$ $>$ \mbox{\hyperlink{class_language_switch_a81714c79a3e66c0b03a604c902ab1468}{main\+Window\+List}}
+\begin{DoxyCompactList}\small\item\em Список ссылок на все открые главные окна приложения \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_language_switch_a20df782a6386d477928869260ede6f96}\label{class_language_switch_a20df782a6386d477928869260ede6f96}} 
+Q\+Translator $\ast$ \mbox{\hyperlink{class_language_switch_a20df782a6386d477928869260ede6f96}{app\+Translator}} = new Q\+Translator
+\begin{DoxyCompactList}\small\item\em Ссылка на переводчик кастомных тектов \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_language_switch_a32c94910eaaaa28182afc3031191453f}\label{class_language_switch_a32c94910eaaaa28182afc3031191453f}} 
+Q\+Translator $\ast$ \mbox{\hyperlink{class_language_switch_a32c94910eaaaa28182afc3031191453f}{qt\+Translator}} = new Q\+Translator
+\begin{DoxyCompactList}\small\item\em Ссылка на переводчик системных тектов \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_language_switch_ac1923f713ef436d6eb797a023c0382c0}\label{class_language_switch_ac1923f713ef436d6eb797a023c0382c0}} 
+Q\+String \mbox{\hyperlink{class_language_switch_ac1923f713ef436d6eb797a023c0382c0}{language}} = \char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em Строка, хранящая текущий выбранный язык \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_language_switch_a761e2df31d785a582264c8d51d46e14f}\label{class_language_switch_a761e2df31d785a582264c8d51d46e14f}} 
+static \mbox{\hyperlink{class_language_switch}{Language\+Switch}} $\ast$ \mbox{\hyperlink{class_language_switch_a761e2df31d785a582264c8d51d46e14f}{instance}} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em Ссылка на единственный объект класса \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_language_switch}{Language\+Switch}} Собственный класс переводчика 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_language_switch_aaaf776c062ae2690092a674e7e5efdd1}\label{class_language_switch_aaaf776c062ae2690092a674e7e5efdd1}} 
+\index{LanguageSwitch@{LanguageSwitch}!LanguageSwitch@{LanguageSwitch}}
+\index{LanguageSwitch@{LanguageSwitch}!LanguageSwitch@{LanguageSwitch}}
+\subsubsection{\texorpdfstring{LanguageSwitch()}{LanguageSwitch()}}
+{\footnotesize\ttfamily Language\+Switch\+::\+Language\+Switch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Конструктор по умолччанию 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_language_switch_ab97b59217547f4ac359b80132a41002b}\label{class_language_switch_ab97b59217547f4ac359b80132a41002b}} 
+\index{LanguageSwitch@{LanguageSwitch}!append@{append}}
+\index{append@{append}!LanguageSwitch@{LanguageSwitch}}
+\subsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily void Language\+Switch\+::append (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_main_window}{Main\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+Метод, добавляющий ссылку на главное окно в список ссылкок на главные окна window ссылка на окно котороое нужно добавить \mbox{\Hypertarget{class_language_switch_a64444b644fb7f7a0612998d40928a8fc}\label{class_language_switch_a64444b644fb7f7a0612998d40928a8fc}} 
+\index{LanguageSwitch@{LanguageSwitch}!getAppLanguage@{getAppLanguage}}
+\index{getAppLanguage@{getAppLanguage}!LanguageSwitch@{LanguageSwitch}}
+\subsubsection{\texorpdfstring{getAppLanguage()}{getAppLanguage()}}
+{\footnotesize\ttfamily Q\+String Language\+Switch\+::get\+App\+Language (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Метод, возвращающий текущий системный язык Строка, содержащая информацию о текущем системном языке \mbox{\Hypertarget{class_language_switch_a3fb95c9db6175a4911766462bb141ec9}\label{class_language_switch_a3fb95c9db6175a4911766462bb141ec9}} 
+\index{LanguageSwitch@{LanguageSwitch}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!LanguageSwitch@{LanguageSwitch}}
+\subsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_language_switch}{Language\+Switch}} $\ast$ Language\+Switch\+::\+Get\+Instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Метод, дающий доступ к единственному объекту класса. возвращает единственный экземпляр класса \mbox{\hyperlink{class_language_switch}{Language\+Switch}}. \mbox{\Hypertarget{class_language_switch_abbeea6d84e165377ab4d2707d013ad8f}\label{class_language_switch_abbeea6d84e165377ab4d2707d013ad8f}} 
+\index{LanguageSwitch@{LanguageSwitch}!loadAppTranslator@{loadAppTranslator}}
+\index{loadAppTranslator@{loadAppTranslator}!LanguageSwitch@{LanguageSwitch}}
+\subsubsection{\texorpdfstring{loadAppTranslator()}{loadAppTranslator()}}
+{\footnotesize\ttfamily void Language\+Switch\+::load\+App\+Translator (\begin{DoxyParamCaption}\item[{Q\+String}]{locale }\end{DoxyParamCaption})}
+
+Метод, устанавлювающий новый кастомный переводчик в приложение locale язык, который нужно загрузить \mbox{\Hypertarget{class_language_switch_a94b3b12b84af0f4eee8b2b90cbd1cebc}\label{class_language_switch_a94b3b12b84af0f4eee8b2b90cbd1cebc}} 
+\index{LanguageSwitch@{LanguageSwitch}!loadQtTranslator@{loadQtTranslator}}
+\index{loadQtTranslator@{loadQtTranslator}!LanguageSwitch@{LanguageSwitch}}
+\subsubsection{\texorpdfstring{loadQtTranslator()}{loadQtTranslator()}}
+{\footnotesize\ttfamily void Language\+Switch\+::load\+Qt\+Translator (\begin{DoxyParamCaption}\item[{Q\+String}]{locale }\end{DoxyParamCaption})}
+
+Метод, устанавливающий системный переводчик в приложении locale язык, который нужно загрузить \mbox{\Hypertarget{class_language_switch_ad3507c437b4a165484a385f6afe3882d}\label{class_language_switch_ad3507c437b4a165484a385f6afe3882d}} 
+\index{LanguageSwitch@{LanguageSwitch}!pop@{pop}}
+\index{pop@{pop}!LanguageSwitch@{LanguageSwitch}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void Language\+Switch\+::pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_main_window}{Main\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+Метод, удаляющий ссылку на главное окно из списка ссылкок на главные окна window ссылка на окно котороое нужно удалить \mbox{\Hypertarget{class_language_switch_a3ee3f692430ab7bb6337dddc9dfc35cd}\label{class_language_switch_a3ee3f692430ab7bb6337dddc9dfc35cd}} 
+\index{LanguageSwitch@{LanguageSwitch}!setAppLanguage@{setAppLanguage}}
+\index{setAppLanguage@{setAppLanguage}!LanguageSwitch@{LanguageSwitch}}
+\subsubsection{\texorpdfstring{setAppLanguage()}{setAppLanguage()}}
+{\footnotesize\ttfamily void Language\+Switch\+::set\+App\+Language (\begin{DoxyParamCaption}\item[{Q\+String}]{locale }\end{DoxyParamCaption})}
+
+Метод, устанавливающий системный язык locale язык, который нужно записать как новый выбранный \mbox{\Hypertarget{class_language_switch_a771b7ad7302497cff07d2c22c32974a1}\label{class_language_switch_a771b7ad7302497cff07d2c22c32974a1}} 
+\index{LanguageSwitch@{LanguageSwitch}!translateAll@{translateAll}}
+\index{translateAll@{translateAll}!LanguageSwitch@{LanguageSwitch}}
+\subsubsection{\texorpdfstring{translateAll()}{translateAll()}}
+{\footnotesize\ttfamily void Language\+Switch\+::translate\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Метод, переводящий все окна в приложении на выбранный язык 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+language\+Switch.\+h\item 
+language\+Switch.\+cpp\end{DoxyCompactItemize}

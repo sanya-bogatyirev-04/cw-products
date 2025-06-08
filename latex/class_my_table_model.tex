@@ -1,0 +1,124 @@
+\hypertarget{class_my_table_model}{}\section{My\+Table\+Model Class Reference}
+\label{class_my_table_model}\index{MyTableModel@{MyTableModel}}
+
+
+{\ttfamily \#include \char`\"{}table.\+hpp\char`\"{}}
+
+
+
+Inherits Q\+Abstract\+Table\+Model.
+
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_my_table_model_ad867e15ab08775a1d037a50ada49db8a}\label{class_my_table_model_ad867e15ab08775a1d037a50ada49db8a}} 
+void \mbox{\hyperlink{class_my_table_model_ad867e15ab08775a1d037a50ada49db8a}{model\+Data\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Сигнал о прошедших изменениях данных в таблице \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_my_table_model_a09341446ff85069c54b77a3f0866747e}\label{class_my_table_model_a09341446ff85069c54b77a3f0866747e}} 
+\mbox{\hyperlink{class_my_table_model_a09341446ff85069c54b77a3f0866747e}{My\+Table\+Model}} (Q\+Object $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Контструктор по умолчанию \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_my_table_model_adc21fad64fbf352ad74a4669c1d9bddd}\label{class_my_table_model_adc21fad64fbf352ad74a4669c1d9bddd}} 
+int \mbox{\hyperlink{class_my_table_model_adc21fad64fbf352ad74a4669c1d9bddd}{row\+Count}} (const Q\+Model\+Index \&parent=Q\+Model\+Index()) const override
+\begin{DoxyCompactList}\small\item\em Метод, возвращающий кол-\/во строк в модели \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_my_table_model_ab50bbbb24b0037dfba3ae9628b8e1186}\label{class_my_table_model_ab50bbbb24b0037dfba3ae9628b8e1186}} 
+int \mbox{\hyperlink{class_my_table_model_ab50bbbb24b0037dfba3ae9628b8e1186}{column\+Count}} (const Q\+Model\+Index \&parent=Q\+Model\+Index()) const override
+\begin{DoxyCompactList}\small\item\em Метод, возвращающий кол-\/во столбиков в модели \end{DoxyCompactList}\item 
+Q\+Variant \mbox{\hyperlink{class_my_table_model_affedfb28280a3ae512875ecfd8fad1e1}{data}} (const Q\+Model\+Index \&index, int role) const override
+\item 
+Qt\+::\+Item\+Flags \mbox{\hyperlink{class_my_table_model_a87bc6c586fac3a1cb7248865144e9e15}{flags}} (const Q\+Model\+Index \&index) const override
+\item 
+bool \mbox{\hyperlink{class_my_table_model_a9846177864f17c414cd77545e3d3a9cb}{set\+Data}} (const Q\+Model\+Index \&index, const Q\+Variant \&value, int role) override
+\item 
+Q\+Variant \mbox{\hyperlink{class_my_table_model_a2a78f29e1befdcab173d458d1f6ff6e1}{header\+Data}} (int section, Qt\+::\+Orientation orientation, int role) const override
+\item 
+bool \mbox{\hyperlink{class_my_table_model_a2d1347632c07b69acbd208cc087d6397}{append\+Row}} (const \mbox{\hyperlink{class_data}{Data}} \&value=\mbox{\hyperlink{class_data}{Data}}())
+\item 
+bool \mbox{\hyperlink{class_my_table_model_ae8c18be5372bf17454d21b12a368ebb3}{remove\+Row}} (const int position)
+\item 
+\mbox{\hyperlink{class_data}{Data}} \mbox{\hyperlink{class_my_table_model_abf64dd06923af11bcd4bdc6d759402ce}{get\+Data\+From\+Table}} (int)
+\item 
+\mbox{\Hypertarget{class_my_table_model_a4f5e129d5da917fe2155a5e0982caf4b}\label{class_my_table_model_a4f5e129d5da917fe2155a5e0982caf4b}} 
+void \mbox{\hyperlink{class_my_table_model_a4f5e129d5da917fe2155a5e0982caf4b}{drop\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Очищает таблицу. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_table_model_a878078058b205a92c195d43aa45376db}{over\+Write\+Data}} (int row, const \mbox{\hyperlink{class_data}{Data}} \&value=\mbox{\hyperlink{class_data}{Data}}())
+\item 
+void \mbox{\hyperlink{class_my_table_model_adfcdee0f5dc44c611cc8e1cfd4fec6dd}{update\+Headers}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_my_table_model_a387efcbd2c549b89def30316fb246836}\label{class_my_table_model_a387efcbd2c549b89def30316fb246836}} 
+const int \mbox{\hyperlink{class_my_table_model_a387efcbd2c549b89def30316fb246836}{columns\+Num}}
+\begin{DoxyCompactList}\small\item\em Кол-\/во столбцов \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_my_table_model_ae19c23fcd9ffecbc283af4aa949c492b}\label{class_my_table_model_ae19c23fcd9ffecbc283af4aa949c492b}} 
+Q\+List$<$ \mbox{\hyperlink{class_data}{Data}} $>$ \mbox{\hyperlink{class_my_table_model_ae19c23fcd9ffecbc283af4aa949c492b}{Data\+Model\+List}}
+\begin{DoxyCompactList}\small\item\em Список данных для строк в таблице \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_my_table_model}{My\+Table\+Model}} Собственная реализация класса Q\+Abstract\+Table\+Model. Отвечает за работу table\+View. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_my_table_model_a2d1347632c07b69acbd208cc087d6397}\label{class_my_table_model_a2d1347632c07b69acbd208cc087d6397}} 
+\index{MyTableModel@{MyTableModel}!appendRow@{appendRow}}
+\index{appendRow@{appendRow}!MyTableModel@{MyTableModel}}
+\subsubsection{\texorpdfstring{appendRow()}{appendRow()}}
+{\footnotesize\ttfamily bool My\+Table\+Model\+::append\+Row (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{value = {\ttfamily \mbox{\hyperlink{class_data}{Data}}()} }\end{DoxyParamCaption})}
+
+Метод, добавляющий новую строку в список данных. value Объект класса Data\+Element, по умолчанию пустой. bool Запись добавлена успешно. \mbox{\Hypertarget{class_my_table_model_affedfb28280a3ae512875ecfd8fad1e1}\label{class_my_table_model_affedfb28280a3ae512875ecfd8fad1e1}} 
+\index{MyTableModel@{MyTableModel}!data@{data}}
+\index{data@{data}!MyTableModel@{MyTableModel}}
+\subsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily Q\+Variant My\+Table\+Model\+::data (\begin{DoxyParamCaption}\item[{const Q\+Model\+Index \&}]{index,  }\item[{int}]{role }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Метод, возвращающий обработанные данные для отображения в таблице index Индекс ячейки в модели. role Роль (отображение, редактирование и тд). пустой Q\+Variant, или данные для отображения \mbox{\Hypertarget{class_my_table_model_a87bc6c586fac3a1cb7248865144e9e15}\label{class_my_table_model_a87bc6c586fac3a1cb7248865144e9e15}} 
+\index{MyTableModel@{MyTableModel}!flags@{flags}}
+\index{flags@{flags}!MyTableModel@{MyTableModel}}
+\subsubsection{\texorpdfstring{flags()}{flags()}}
+{\footnotesize\ttfamily Qt\+::\+Item\+Flags My\+Table\+Model\+::flags (\begin{DoxyParamCaption}\item[{const Q\+Model\+Index \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Метод, возвращающий набор флагов ячейки index Индекс ячейки в модели. Набор активных флагов (параметров) ячейки \mbox{\Hypertarget{class_my_table_model_abf64dd06923af11bcd4bdc6d759402ce}\label{class_my_table_model_abf64dd06923af11bcd4bdc6d759402ce}} 
+\index{MyTableModel@{MyTableModel}!getDataFromTable@{getDataFromTable}}
+\index{getDataFromTable@{getDataFromTable}!MyTableModel@{MyTableModel}}
+\subsubsection{\texorpdfstring{getDataFromTable()}{getDataFromTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_data}{Data}} My\+Table\+Model\+::get\+Data\+From\+Table (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})}
+
+Метод для получения записи из таблицы. Data\+Element данные. \mbox{\Hypertarget{class_my_table_model_a2a78f29e1befdcab173d458d1f6ff6e1}\label{class_my_table_model_a2a78f29e1befdcab173d458d1f6ff6e1}} 
+\index{MyTableModel@{MyTableModel}!headerData@{headerData}}
+\index{headerData@{headerData}!MyTableModel@{MyTableModel}}
+\subsubsection{\texorpdfstring{headerData()}{headerData()}}
+{\footnotesize\ttfamily Q\+Variant My\+Table\+Model\+::header\+Data (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{Qt\+::\+Orientation}]{orientation,  }\item[{int}]{role }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Метод, возвращает сформированный заголовок section Столбец в таблице. orientation Ориентация (для определения строка/столбец). role Роль (отображение, редактирование и тд.). По умолчанию Display\+Role. Сформированный заголовок. \mbox{\Hypertarget{class_my_table_model_a878078058b205a92c195d43aa45376db}\label{class_my_table_model_a878078058b205a92c195d43aa45376db}} 
+\index{MyTableModel@{MyTableModel}!overWriteData@{overWriteData}}
+\index{overWriteData@{overWriteData}!MyTableModel@{MyTableModel}}
+\subsubsection{\texorpdfstring{overWriteData()}{overWriteData()}}
+{\footnotesize\ttfamily void My\+Table\+Model\+::over\+Write\+Data (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{value = {\ttfamily \mbox{\hyperlink{class_data}{Data}}()} }\end{DoxyParamCaption})}
+
+Метод, перезаписывающий данные в заданной строке. row Строка, в которую нужно перезаписать данные. value Data\+Element, на который нужно сделать замену. \mbox{\Hypertarget{class_my_table_model_ae8c18be5372bf17454d21b12a368ebb3}\label{class_my_table_model_ae8c18be5372bf17454d21b12a368ebb3}} 
+\index{MyTableModel@{MyTableModel}!removeRow@{removeRow}}
+\index{removeRow@{removeRow}!MyTableModel@{MyTableModel}}
+\subsubsection{\texorpdfstring{removeRow()}{removeRow()}}
+{\footnotesize\ttfamily bool My\+Table\+Model\+::remove\+Row (\begin{DoxyParamCaption}\item[{const int}]{position }\end{DoxyParamCaption})}
+
+Метод, удалияющий строку из списка данных. position Номер удаляемой строки. bool Запись удалена успешно. \mbox{\Hypertarget{class_my_table_model_a9846177864f17c414cd77545e3d3a9cb}\label{class_my_table_model_a9846177864f17c414cd77545e3d3a9cb}} 
+\index{MyTableModel@{MyTableModel}!setData@{setData}}
+\index{setData@{setData}!MyTableModel@{MyTableModel}}
+\subsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily bool My\+Table\+Model\+::set\+Data (\begin{DoxyParamCaption}\item[{const Q\+Model\+Index \&}]{index,  }\item[{const Q\+Variant \&}]{value,  }\item[{int}]{role }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Метод, обновлящий данные в списке, после взаимодейсвтвия с ними через table\+View index Индекс ячейки в таблице. value Значение, которое требуется установить role Роль (отображение, редактирование и тд.). успешно ли прошла установка данных \mbox{\Hypertarget{class_my_table_model_adfcdee0f5dc44c611cc8e1cfd4fec6dd}\label{class_my_table_model_adfcdee0f5dc44c611cc8e1cfd4fec6dd}} 
+\index{MyTableModel@{MyTableModel}!updateHeaders@{updateHeaders}}
+\index{updateHeaders@{updateHeaders}!MyTableModel@{MyTableModel}}
+\subsubsection{\texorpdfstring{updateHeaders()}{updateHeaders()}}
+{\footnotesize\ttfamily void My\+Table\+Model\+::update\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Метод, обновляющий заголовки столбцов. Уведомляет Q\+Table\+View о необходимости перерисовки заголовков. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+table.\+hpp\item 
+table.\+cpp\end{DoxyCompactItemize}
