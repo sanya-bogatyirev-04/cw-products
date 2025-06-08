@@ -44,7 +44,7 @@
     <message>
         <location filename="../find.ui" line="78"/>
         <source>in </source>
-        <translation type="unfinished"></translation>
+        <translation>in</translation>
     </message>
     <message>
         <location filename="../find.ui" line="91"/>
@@ -108,222 +108,190 @@
         <source>Close</source>
         <translation type="vanished">Close</translation>
     </message>
-    <message>
-        <location filename="../grapf.ui" line="26"/>
-        <source>Dependence of length on type</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../grapf.cpp" line="119"/>
-        <source> for </source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="26"/>
         <source>MainWindow</source>
-        <translation>Accounting of Building Materials Manufacturers</translation>
+        <translation>Accounting of Building Materials</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="68"/>
+        <location filename="../mainwindow.ui" line="71"/>
         <source>File</source>
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="82"/>
+        <location filename="../mainwindow.ui" line="84"/>
         <source>Language</source>
         <translation>Language</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="89"/>
+        <location filename="../mainwindow.ui" line="91"/>
         <source>About</source>
         <translation>About</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="95"/>
+        <location filename="../mainwindow.ui" line="97"/>
         <source>Edit</source>
         <translation>Edit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="107"/>
+        <location filename="../mainwindow.ui" line="109"/>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="123"/>
+        <location filename="../mainwindow.ui" line="124"/>
         <source>Русский</source>
         <translation>Russian</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="132"/>
+        <location filename="../mainwindow.ui" line="133"/>
         <source>English</source>
         <translation>English</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="137"/>
+        <location filename="../mainwindow.ui" line="138"/>
         <source>Open</source>
         <translation>Open</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="140"/>
+        <location filename="../mainwindow.ui" line="141"/>
         <source>Ctrl+O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="145"/>
+        <location filename="../mainwindow.ui" line="146"/>
         <source>Close</source>
         <translation>Close</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="148"/>
+        <location filename="../mainwindow.ui" line="149"/>
         <source>Ctrl+W</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="153"/>
+        <location filename="../mainwindow.ui" line="154"/>
         <source>Exit</source>
         <translation>Exit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="156"/>
+        <location filename="../mainwindow.ui" line="157"/>
         <source>Ctrl+Q</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="161"/>
+        <location filename="../mainwindow.ui" line="162"/>
         <source>Create</source>
         <translation>Create</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="167"/>
+        <location filename="../mainwindow.ui" line="168"/>
         <source>Ctrl+N</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="172"/>
+        <location filename="../mainwindow.ui" line="173"/>
         <source>Save as</source>
         <translation>Save As</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="175"/>
+        <location filename="../mainwindow.ui" line="176"/>
         <source>Ctrl+Shift+S</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="180"/>
+        <location filename="../mainwindow.ui" line="181"/>
         <source>Save</source>
         <translation>Save</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="183"/>
+        <location filename="../mainwindow.ui" line="184"/>
         <source>Ctrl+S</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="188"/>
+        <location filename="../mainwindow.ui" line="189"/>
         <source>Add to end</source>
         <translation>Add to End</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="191"/>
+        <location filename="../mainwindow.ui" line="192"/>
         <source>Ins</source>
         <translation>Ins</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="196"/>
+        <location filename="../mainwindow.ui" line="197"/>
         <source>Remove</source>
         <translation>Remove</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="199"/>
+        <location filename="../mainwindow.ui" line="200"/>
         <source>Del</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="204"/>
+        <location filename="../mainwindow.ui" line="205"/>
         <source>Copy</source>
         <translation>Copy</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="207"/>
+        <location filename="../mainwindow.ui" line="208"/>
         <source>Ctrl+C</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="212"/>
+        <location filename="../mainwindow.ui" line="213"/>
         <source>Cut</source>
         <translation>Cut</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="215"/>
+        <location filename="../mainwindow.ui" line="216"/>
         <source>Ctrl+X</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="220"/>
+        <location filename="../mainwindow.ui" line="221"/>
         <source>Paste</source>
         <translation>Paste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="223"/>
+        <location filename="../mainwindow.ui" line="224"/>
         <source>Ctrl+V</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="228"/>
+        <location filename="../mainwindow.ui" line="229"/>
         <source>Find</source>
         <translation>Find</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="231"/>
+        <location filename="../mainwindow.ui" line="232"/>
         <source>Ctrl+F</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="236"/>
+        <location filename="../mainwindow.ui" line="237"/>
         <source>Author</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="265"/>
-        <source>Ctrl+G</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Autor</source>
         <translation type="vanished">Autor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="241"/>
+        <location filename="../mainwindow.ui" line="242"/>
         <source>Ruturn to original sorting</source>
         <translation>Ruturn to original sorting</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="246"/>
         <source>New window</source>
-        <translation>New window</translation>
+        <translation type="vanished">New window</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="249"/>
-        <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="254"/>
-        <source>Print</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="257"/>
-        <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="262"/>
         <source>Grapf</source>
-        <translation>Grapf</translation>
+        <translation type="vanished">Grapf</translation>
     </message>
     <message>
         <location filename="../file.cpp" line="14"/>
@@ -364,28 +332,28 @@
         <translation>Do you want to save it?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="145"/>
+        <location filename="../mainwindow.cpp" line="140"/>
         <source>Open File</source>
         <translation>Open File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="147"/>
-        <location filename="../mainwindow.cpp" line="201"/>
+        <location filename="../mainwindow.cpp" line="142"/>
+        <location filename="../mainwindow.cpp" line="191"/>
         <source>Text Files( *.txt , *.dat , *.db);;All Files (*)</source>
         <translation>Text Files (*.txt, *.dat, *.db);;All Files (*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="71"/>
+        <location filename="../mainwindow.cpp" line="70"/>
         <source>Exit from app</source>
         <translation>Exit from app</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="72"/>
+        <location filename="../mainwindow.cpp" line="71"/>
         <source>Close app?</source>
         <translation>Close app?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="199"/>
+        <location filename="../mainwindow.cpp" line="189"/>
         <source>Save File</source>
         <translation>Save File</translation>
     </message>
@@ -398,18 +366,18 @@
     <message>
         <location filename="../row.cpp" line="36"/>
         <source>No row selected</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../row.cpp" line="43"/>
         <source>Failed to remove row or table is empty</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../row.cpp" line="102"/>
         <source>Data format is not supported.
-You can paste only rows with 8 columns.</source>
-        <translation type="unfinished"></translation>
+You can paste only rows with 9 columns.</source>
+        <translation></translation>
     </message>
     <message>
         <source>The table is empty</source>
@@ -475,15 +443,13 @@ You can paste only rows.</translation>
         <translation>Date</translation>
     </message>
     <message>
-        <location filename="../table.cpp" line="194"/>
         <source>Unsupported Input Data Format</source>
-        <translation>Unsupported Input Data Format</translation>
+        <translation type="vanished">Unsupported Input Data Format</translation>
     </message>
     <message>
-        <location filename="../table.cpp" line="195"/>
         <source>Data format is not supported.
 You can paste only rows.</source>
-        <translation>Data format is not supported.
+        <translation type="vanished">Data format is not supported.
 You can paste only rows.</translation>
     </message>
 </context>

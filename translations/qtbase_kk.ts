@@ -30,27 +30,27 @@
         <location filename="../finddialog.ui" line="20"/>
         <location filename="../finddialog.ui" line="67"/>
         <source>Find</source>
-        <translation type="unfinished">Найти</translation>
+        <translation>Найти</translation>
     </message>
     <message>
         <location filename="../finddialog.ui" line="43"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../finddialog.ui" line="77"/>
         <source>in column</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../finddialog.ui" line="85"/>
         <source>Any</source>
-        <translation type="unfinished">Любая</translation>
+        <translation>Любая</translation>
     </message>
     <message>
         <location filename="../finddialog.ui" line="90"/>
         <source>Code</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../finddialog.ui" line="100"/>
@@ -85,12 +85,12 @@
     <message>
         <location filename="../finddialog.ui" line="95"/>
         <source>Name</source>
-        <translation type="unfinished">Имя</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../finddialog.cpp" line="40"/>
         <source> in </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>

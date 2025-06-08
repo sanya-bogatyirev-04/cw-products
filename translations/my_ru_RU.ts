@@ -44,7 +44,7 @@
     <message>
         <location filename="../find.ui" line="78"/>
         <source>in </source>
-        <translation type="unfinished"></translation>
+        <translation>в</translation>
     </message>
     <message>
         <location filename="../find.ui" line="91"/>
@@ -109,14 +109,8 @@
         <translation type="vanished">Закрыть</translation>
     </message>
     <message>
-        <location filename="../grapf.ui" line="26"/>
         <source>Dependence of length on type</source>
-        <translation>Зависимость длины от типа</translation>
-    </message>
-    <message>
-        <location filename="../grapf.cpp" line="119"/>
-        <source> for </source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Зависимость длины от типа</translation>
     </message>
 </context>
 <context>
@@ -127,199 +121,177 @@
         <translation>Учет строительных материалов</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="68"/>
+        <location filename="../mainwindow.ui" line="71"/>
         <source>File</source>
         <translation>Файл</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="82"/>
+        <location filename="../mainwindow.ui" line="84"/>
         <source>Language</source>
         <translation>Язык</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="89"/>
+        <location filename="../mainwindow.ui" line="91"/>
         <source>About</source>
         <translation>Справка</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="95"/>
+        <location filename="../mainwindow.ui" line="97"/>
         <source>Edit</source>
         <translation>Редактировать</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="107"/>
+        <location filename="../mainwindow.ui" line="109"/>
         <source>Filter</source>
         <translation>Фильтр</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="123"/>
+        <location filename="../mainwindow.ui" line="124"/>
         <source>Русский</source>
         <translation>Русский</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="132"/>
+        <location filename="../mainwindow.ui" line="133"/>
         <source>English</source>
         <translation>Английский</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="137"/>
+        <location filename="../mainwindow.ui" line="138"/>
         <source>Open</source>
         <translation>Открыть</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="140"/>
+        <location filename="../mainwindow.ui" line="141"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="145"/>
+        <location filename="../mainwindow.ui" line="146"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="148"/>
+        <location filename="../mainwindow.ui" line="149"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="153"/>
+        <location filename="../mainwindow.ui" line="154"/>
         <source>Exit</source>
         <translation>Выход</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="156"/>
+        <location filename="../mainwindow.ui" line="157"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="161"/>
+        <location filename="../mainwindow.ui" line="162"/>
         <source>Create</source>
         <translation>Создать</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="167"/>
+        <location filename="../mainwindow.ui" line="168"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="172"/>
+        <location filename="../mainwindow.ui" line="173"/>
         <source>Save as</source>
         <translation>Сохранить как</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="175"/>
+        <location filename="../mainwindow.ui" line="176"/>
         <source>Ctrl+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="180"/>
+        <location filename="../mainwindow.ui" line="181"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="183"/>
+        <location filename="../mainwindow.ui" line="184"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="188"/>
+        <location filename="../mainwindow.ui" line="189"/>
         <source>Add to end</source>
         <translation>Добавить строку в конец</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="191"/>
+        <location filename="../mainwindow.ui" line="192"/>
         <source>Ins</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="196"/>
+        <location filename="../mainwindow.ui" line="197"/>
         <source>Remove</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="199"/>
+        <location filename="../mainwindow.ui" line="200"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="204"/>
+        <location filename="../mainwindow.ui" line="205"/>
         <source>Copy</source>
         <translation>Копировать</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="207"/>
+        <location filename="../mainwindow.ui" line="208"/>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="212"/>
+        <location filename="../mainwindow.ui" line="213"/>
         <source>Cut</source>
         <translation>Вырезать</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="215"/>
+        <location filename="../mainwindow.ui" line="216"/>
         <source>Ctrl+X</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="220"/>
+        <location filename="../mainwindow.ui" line="221"/>
         <source>Paste</source>
         <translation>Вставить</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="223"/>
+        <location filename="../mainwindow.ui" line="224"/>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="228"/>
+        <location filename="../mainwindow.ui" line="229"/>
         <source>Find</source>
         <translation>Найти</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="231"/>
+        <location filename="../mainwindow.ui" line="232"/>
         <source>Ctrl+F</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="236"/>
+        <location filename="../mainwindow.ui" line="237"/>
         <source>Author</source>
-        <translation type="unfinished">Автор</translation>
+        <translation>Автор</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="241"/>
+        <location filename="../mainwindow.ui" line="242"/>
         <source>Ruturn to original sorting</source>
         <translation>Вернуть изначальную сортировку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="246"/>
         <source>New window</source>
-        <translation>Новое окно</translation>
+        <translation type="vanished">Новое окно</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="249"/>
-        <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="254"/>
-        <source>Print</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="257"/>
-        <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="262"/>
         <source>Grapf</source>
-        <translation>График</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="265"/>
-        <source>Ctrl+G</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">График</translation>
     </message>
     <message>
         <location filename="../file.cpp" line="14"/>
@@ -360,28 +332,36 @@
         <translation>Желаете сохранить?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="145"/>
+        <location filename="../mainwindow.cpp" line="140"/>
         <source>Open File</source>
         <translation>Открыть файл</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="147"/>
-        <location filename="../mainwindow.cpp" line="201"/>
+        <location filename="../mainwindow.cpp" line="142"/>
+        <location filename="../mainwindow.cpp" line="191"/>
         <source>Text Files( *.txt , *.dat , *.db);;All Files (*)</source>
         <translation>Текстовые файлы (*.txt, *.dat, *.db);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="71"/>
+        <location filename="../mainwindow.cpp" line="70"/>
         <source>Exit from app</source>
         <translation>Выйти из приложения</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="72"/>
+        <location filename="../mainwindow.cpp" line="71"/>
         <source>Close app?</source>
         <translation>Закрыть приложение?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="199"/>
+        <source>Yes</source>
+        <translation type="vanished">Да</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation type="vanished">Нет</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="189"/>
         <source>Save File</source>
         <translation>Сохранить файл</translation>
     </message>
@@ -404,17 +384,12 @@
     <message>
         <location filename="../row.cpp" line="102"/>
         <source>Data format is not supported.
-You can paste only rows with 8 columns.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Data format is not supported.
 You can paste only rows with 9 columns.</source>
-        <translation type="obsolete">Формат данных не поддерживается.
+        <translation>Формат данных не поддерживается.
         Вы можете вставлять только строки с 9 столбцами.</translation>
     </message>
     <message>
-        <source>Data format is not supported.You can paste only rows with 9 columns.</source>
+        <source>Data format is not supported.\nYou can paste only rows with 9 columns.</source>
         <translation type="vanished">Формат данных не поддерживается.Вы можете вставлять только строки с 9 столбцами.</translation>
     </message>
     <message>
@@ -481,15 +456,13 @@ You can paste only rows.</source>
         <translation>Дата</translation>
     </message>
     <message>
-        <location filename="../table.cpp" line="194"/>
         <source>Unsupported Input Data Format</source>
-        <translation>Неподдерживаемый формат данных</translation>
+        <translation type="vanished">Неподдерживаемый формат данных</translation>
     </message>
     <message>
-        <location filename="../table.cpp" line="195"/>
         <source>Data format is not supported.
 You can paste only rows.</source>
-        <translation>Формат данных не поддерживается.
+        <translation type="vanished">Формат данных не поддерживается.
 Вы можете вставлять только строки.</translation>
     </message>
 </context>
