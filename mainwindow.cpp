@@ -96,7 +96,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::loadSettings()
 {
-    QSettings settings("MGSU", "cw-products");
+    QSettings settings("MGSU", "pr-products");
     settings.beginGroup("MainWindowGeometry");
     resize(settings.value("size", QSize(400, 400)).toSize());
     move(settings.value("position", QPoint(200, 200)).toPoint());
@@ -108,7 +108,7 @@ void MainWindow::loadSettings()
 
 void MainWindow::saveSettings()
 {
-    QSettings settings("MGSU", "cw-products");
+    QSettings settings("MGSU", "pr-products");
     settings.beginGroup("MainWindowGeometry");
     settings.setValue("size", size());
     settings.setValue("position", pos());
