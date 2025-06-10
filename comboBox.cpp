@@ -2,6 +2,10 @@
 
 #include <QComboBox>
 #include <QMouseEvent>
+#include <QAbstractItemView>
+#include <QDebug>
+#include <QTableWidget>
+
 
 ComboBox::ComboBox(QWidget *parent):
     QStyledItemDelegate(parent)

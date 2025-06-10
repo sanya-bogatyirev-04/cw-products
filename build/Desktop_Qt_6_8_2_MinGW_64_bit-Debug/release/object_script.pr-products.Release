@@ -1,5 +1,6 @@
 release/authorAbout.o
 release/comboBox.o
+release/date.o
 release/table.o
 release/data.o
 release/file.o
@@ -13,6 +14,7 @@ release/row.o
 release/qrc_translations.o
 release/moc_authorAbout.o
 release/moc_comboBox.o
+release/moc_date.o
 release/moc_table.o
 release/moc_find.o
 release/moc_languageSwitch.o

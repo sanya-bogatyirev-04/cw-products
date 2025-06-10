@@ -1,5 +1,6 @@
 debug/authorAbout.o
 debug/comboBox.o
+debug/date.o
 debug/table.o
 debug/data.o
 debug/file.o
@@ -13,6 +14,7 @@ debug/row.o
 debug/qrc_translations.o
 debug/moc_authorAbout.o
 debug/moc_comboBox.o
+debug/moc_date.o
 debug/moc_table.o
 debug/moc_find.o
 debug/moc_languageSwitch.o

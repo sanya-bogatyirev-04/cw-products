@@ -1,6 +1,7 @@
 #include "table.hpp"
 #include "data.hpp"
 #include "mainwindow.h"
+#include "date.h"
 
 #include <QMessageBox>
 

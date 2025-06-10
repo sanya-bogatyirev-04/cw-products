@@ -4,6 +4,8 @@
 #include "authorAbout.h"
 #include "find.h"
 #include "languageSwitch.h"
+#include "comboBox.hpp"
+#include "date.h"
 
 #include <QMessageBox>
 #include <QFileDialog>
@@ -43,6 +45,16 @@ MainWindow::MainWindow(QWidget *parent)
     setDefaultHeadersSizes();
     originalTitle = this->windowTitle();
     this->activateWindow();
+
+    ComboBox *cbDelegate = new ComboBox(ui->tableView);
+
+    cbDelegate->setData(QStringList({ "Hello", "my", "world!" }));
+
+    // Устанавливаем для третьего столбца делегат с выпадающим списком
+    ui->tableView->setItemDelegateForColumn(2, cbDelegate);
+
+    Date *date = new Date(this);
+    ui->tableView->setItemDelegateForColumn(8, date);
 }
 
 void MainWindow::setDefaultHeadersSizes()

@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     authorAbout.cpp \
     comboBox.cpp \
+    date.cpp \
     table.cpp \
     data.cpp \
     file.cpp \
@@ -25,6 +26,7 @@ SOURCES += \
 HEADERS += \
     authorAbout.h \
     comboBox.hpp \
+    date.h \
     table.hpp \
     data.hpp \
     find.h \
