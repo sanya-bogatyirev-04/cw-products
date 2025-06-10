@@ -90,18 +90,9 @@ public:
         horizontalLayout_2->addWidget(constLabelINCOLUMN);
 
         columnBox = new QComboBox(Find);
-        columnBox->addItem(QString());
-        columnBox->addItem(QString());
-        columnBox->addItem(QString());
-        columnBox->addItem(QString());
-        columnBox->addItem(QString());
-        columnBox->addItem(QString());
-        columnBox->addItem(QString());
-        columnBox->addItem(QString());
-        columnBox->addItem(QString());
-        columnBox->addItem(QString());
         columnBox->setObjectName("columnBox");
         columnBox->setFont(font1);
+        columnBox->setInsertPolicy(QComboBox::InsertPolicy::InsertAtBottom);
 
         horizontalLayout_2->addWidget(columnBox);
 
@@ -123,17 +114,6 @@ public:
         closeButton->setText(QCoreApplication::translate("Find", "Close", nullptr));
         constLabelIFIND->setText(QCoreApplication::translate("Find", "Find", nullptr));
         constLabelINCOLUMN->setText(QCoreApplication::translate("Find", "in ", nullptr));
-        columnBox->setItemText(0, QCoreApplication::translate("Find", "Any", nullptr));
-        columnBox->setItemText(1, QCoreApplication::translate("Find", "ID", nullptr));
-        columnBox->setItemText(2, QCoreApplication::translate("Find", "Name", nullptr));
-        columnBox->setItemText(3, QCoreApplication::translate("Find", "Type", nullptr));
-        columnBox->setItemText(4, QCoreApplication::translate("Find", "Mark", nullptr));
-        columnBox->setItemText(5, QCoreApplication::translate("Find", "Length", nullptr));
-        columnBox->setItemText(6, QCoreApplication::translate("Find", "Width", nullptr));
-        columnBox->setItemText(7, QCoreApplication::translate("Find", "Weight", nullptr));
-        columnBox->setItemText(8, QCoreApplication::translate("Find", "Fittings", nullptr));
-        columnBox->setItemText(9, QCoreApplication::translate("Find", "Date", nullptr));
-
     } // retranslateUi
 
 };

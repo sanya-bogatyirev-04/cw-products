@@ -4071,6 +4071,12 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../languageSwitch.h \
 		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/QTranslator \
 		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/qtranslator.h \
+		../../date.h \
+		../../../../../../Qt/6.8.2/mingw_64/include/QtWidgets/QDateEdit \
+		../../../../../../Qt/6.8.2/mingw_64/include/QtWidgets/qdatetimeedit.h \
+		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/qtimezone.h \
+		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/qdatetime.h \
+		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/qcalendar.h \
 		../../../../../../Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox \
 		../../../../../../Qt/6.8.2/mingw_64/include/QtWidgets/qmessagebox.h \
 		../../../../../../Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
@@ -4079,11 +4085,8 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/qdir.h \
 		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/qdirlisting.h \
 		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/qfiledevice.h \
-		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/qdatetime.h \
-		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/qcalendar.h \
 		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/qfile.h \
 		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/qfileinfo.h \
-		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/qtimezone.h \
 		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/QFileInfo \
 		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/QTextStream \
 		../../../../../../Qt/6.8.2/mingw_64/include/QtCore/QSettings \

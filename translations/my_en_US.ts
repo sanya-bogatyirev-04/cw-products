@@ -47,57 +47,61 @@
         <translation>in</translation>
     </message>
     <message>
-        <location filename="../find.ui" line="91"/>
         <source>Any</source>
-        <translation>Any</translation>
+        <translation type="vanished">Any</translation>
     </message>
     <message>
-        <location filename="../find.ui" line="96"/>
+        <location filename="../find.cpp" line="22"/>
+        <source>All Columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../find.cpp" line="23"/>
         <source>ID</source>
         <translation>ID</translation>
     </message>
     <message>
-        <location filename="../find.ui" line="101"/>
+        <location filename="../find.cpp" line="24"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="../find.ui" line="106"/>
+        <location filename="../find.cpp" line="25"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location filename="../find.ui" line="111"/>
+        <location filename="../find.cpp" line="26"/>
         <source>Mark</source>
         <translation>Mark</translation>
     </message>
     <message>
-        <location filename="../find.ui" line="116"/>
+        <location filename="../find.cpp" line="27"/>
         <source>Length</source>
         <translation>Length</translation>
     </message>
     <message>
-        <location filename="../find.ui" line="121"/>
+        <location filename="../find.cpp" line="28"/>
         <source>Width</source>
         <translation>Width</translation>
     </message>
     <message>
-        <location filename="../find.ui" line="126"/>
+        <location filename="../find.cpp" line="29"/>
         <source>Weight</source>
         <translation>Weight</translation>
     </message>
     <message>
-        <location filename="../find.ui" line="131"/>
+        <location filename="../find.cpp" line="30"/>
         <source>Fittings</source>
         <translation>Fittings</translation>
     </message>
     <message>
-        <location filename="../find.ui" line="136"/>
+        <location filename="../find.cpp" line="31"/>
         <source>Date</source>
         <translation>Date</translation>
     </message>
     <message>
-        <location filename="../find.cpp" line="40"/>
+        <location filename="../find.cpp" line="55"/>
         <source> in </source>
         <translation> in </translation>
     </message>
@@ -332,28 +336,28 @@
         <translation>Do you want to save it?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="140"/>
+        <location filename="../mainwindow.cpp" line="164"/>
         <source>Open File</source>
         <translation>Open File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="142"/>
-        <location filename="../mainwindow.cpp" line="191"/>
+        <location filename="../mainwindow.cpp" line="166"/>
+        <location filename="../mainwindow.cpp" line="215"/>
         <source>Text Files( *.txt , *.dat , *.db);;All Files (*)</source>
         <translation>Text Files (*.txt, *.dat, *.db);;All Files (*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="70"/>
+        <location filename="../mainwindow.cpp" line="94"/>
         <source>Exit from app</source>
         <translation>Exit from app</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="71"/>
+        <location filename="../mainwindow.cpp" line="95"/>
         <source>Close app?</source>
         <translation>Close app?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="189"/>
+        <location filename="../mainwindow.cpp" line="213"/>
         <source>Save File</source>
         <translation>Save File</translation>
     </message>
@@ -398,47 +402,47 @@ You can paste only rows.</translation>
 <context>
     <name>MyTableModel</name>
     <message>
-        <location filename="../table.cpp" line="86"/>
+        <location filename="../table.cpp" line="87"/>
         <source>ID</source>
         <translation>ID</translation>
     </message>
     <message>
-        <location filename="../table.cpp" line="87"/>
+        <location filename="../table.cpp" line="88"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="../table.cpp" line="88"/>
+        <location filename="../table.cpp" line="89"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location filename="../table.cpp" line="89"/>
+        <location filename="../table.cpp" line="90"/>
         <source>Mark</source>
         <translation>Mark</translation>
     </message>
     <message>
-        <location filename="../table.cpp" line="90"/>
+        <location filename="../table.cpp" line="91"/>
         <source>Length</source>
         <translation>Length</translation>
     </message>
     <message>
-        <location filename="../table.cpp" line="91"/>
+        <location filename="../table.cpp" line="92"/>
         <source>Width</source>
         <translation>Width</translation>
     </message>
     <message>
-        <location filename="../table.cpp" line="92"/>
+        <location filename="../table.cpp" line="93"/>
         <source>Weight</source>
         <translation>Weight</translation>
     </message>
     <message>
-        <location filename="../table.cpp" line="93"/>
+        <location filename="../table.cpp" line="94"/>
         <source>Fittings</source>
         <translation>Fittings</translation>
     </message>
     <message>
-        <location filename="../table.cpp" line="94"/>
+        <location filename="../table.cpp" line="95"/>
         <source>Date</source>
         <translation>Date</translation>
     </message>

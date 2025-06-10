@@ -43,6 +43,11 @@ public:
     ~Find();
 
     /**
+     * Заполняет ComboBox статическими данными
+     */
+    void setupStaticColumns();
+
+    /**
      * Метод, переводящий интерфейс
      */
     void retranslate();

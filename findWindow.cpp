@@ -4,6 +4,7 @@
 
 void MainWindow::on_actionFind_triggered()
 {
+    find->setupStaticColumns();
     find->show(); // Показываем диалоговое окно с интерфейсом для поиска
 }
 

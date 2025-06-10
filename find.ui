@@ -86,56 +86,9 @@
            <pointsize>28</pointsize>
           </font>
          </property>
-         <item>
-          <property name="text">
-           <string>Any</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ID</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Name</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Type</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Mark</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Length</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Width</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Weight</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fittings</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Date</string>
-          </property>
-         </item>
+         <property name="insertPolicy">
+          <enum>QComboBox::InsertPolicy::InsertAtBottom</enum>
+         </property>
         </widget>
        </item>
       </layout>

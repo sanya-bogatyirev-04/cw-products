@@ -46,16 +46,28 @@ MainWindow::MainWindow(QWidget *parent)
     originalTitle = this->windowTitle();
     this->activateWindow();
 
-    ComboBox *cbDelegate = new ComboBox(ui->tableView);
+    ComboBox *typeDelegate = new ComboBox(ui->tableView);
+    ComboBox *reinDelegate = new ComboBox(ui->tableView);
+    ComboBox *markDelegate = new ComboBox(ui->tableView);
 
-    cbDelegate->setData(QStringList({ "Hello", "my", "world!" }));
+    typeDelegate->setData(QStringList({ "Плита", "Блок", "Колонна", "Лестница", "Перемычка", "Ферма", "Ригель", "Свая", "Кольцо"}));
+    ui->tableView->setItemDelegateForColumn(2, typeDelegate);
 
-    // Устанавливаем для третьего столбца делегат с выпадающим списком
-    ui->tableView->setItemDelegateForColumn(2, cbDelegate);
+    reinDelegate->setData(QStringList({ "А500С", "А400С", "А240С", "А600С"}));
+    ui->tableView->setItemDelegateForColumn(7, reinDelegate);
+
+    markDelegate->setData(QStringList({ "B20", "B15", "B25", "B30", "B10", "B40"}));
+    ui->tableView->setItemDelegateForColumn(3, markDelegate);
 
     Date *date = new Date(this);
     ui->tableView->setItemDelegateForColumn(8, date);
 }
+
+// void MainWindow::on_actionFind_triggered()
+// {
+//     find->setupStaticColumns();
+//     find->show();
+// }
 
 void MainWindow::setDefaultHeadersSizes()
 {

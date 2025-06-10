@@ -16,6 +16,21 @@ Find::~Find()
     delete ui;
 }
 
+void Find::setupStaticColumns()
+{
+    ui->columnBox->clear();
+    ui->columnBox->addItem(tr("All Columns"));
+    ui->columnBox->addItem(tr("ID"));
+    ui->columnBox->addItem(tr("Name"));
+    ui->columnBox->addItem(tr("Type"));
+    ui->columnBox->addItem(tr("Mark"));
+    ui->columnBox->addItem(tr("Length"));
+    ui->columnBox->addItem(tr("Width"));
+    ui->columnBox->addItem(tr("Weight"));
+    ui->columnBox->addItem(tr("Fittings"));
+    ui->columnBox->addItem(tr("Date"));
+}
+
 void Find::closeEvent(QCloseEvent *event)
 {
     ui->lineEdit->setText(""); // Устанавливаем пустую строку в lineEdit для ввода

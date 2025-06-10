@@ -14,7 +14,7 @@ Data::Data():
 {}
 
 Data::Data(int id, QString &name, QString &type,
-                         QString  &mark, double length, double width, double weight,
+                         QString  &mark, int length, int width, double weight,
                          QString &fittings, QString &date):
     id(id),
     name(name),
@@ -94,8 +94,8 @@ void Data::setID(const int id) {this->id = std::abs(id);}
 void Data::setName(const QString &name) {this->name = name;}
 void Data::setType(const QString &type) {this->type = type;}
 void Data::setMark(const QString &mark) {this->mark = mark;}
-void Data::setLength(const double length) {this->length = fabs(length);}
-void Data::setWidth(const double width) {this->width = fabs(width);}
+void Data::setLength(const int length) {this->length = std::abs(length);}
+void Data::setWidth(const int width) {this->width = std::abs(width);}
 void Data::setWeight(const double weight) {this->weight = fabs(weight);}
 void Data::setFittings(const QString &fittings) {this->fittings =fittings;}
 void Data::setDate(const QString &date) {this->date =date;}
@@ -104,8 +104,8 @@ int Data::getID() const {return id;}
 QString Data::getName() const {return name;}
 QString Data::getType() const {return type;}
 QString Data::getMark() const {return mark;}
-double Data::getLenght() const {return length;}
-double Data::getWidth() const {return width;}
+int Data::getLenght() const {return length;}
+int Data::getWidth() const {return width;}
 double Data::getWeight() const {return weight;}
 QString Data::getFittings() const {return fittings;}
 QString Data::getDate() const {return date;}

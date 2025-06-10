@@ -49,8 +49,8 @@ public:
                 QString &name,
                 QString &type,
                 QString &mark,
-                double length,
-                double width,
+                int length,
+                int width,
                 double weight,
                 QString &fittings,
                 QString &date);
@@ -100,13 +100,13 @@ public:
      *   Метод, устанавливающий длину
      *   length длина
      */
-    void setLength(const double length);
+    void setLength(const int length);
 
     /**
      *   Метод, устанавливающий ширину
      *   width ширина
      */
-    void setWidth(const double width);
+    void setWidth(const int width);
 
 
     /**
@@ -141,10 +141,10 @@ public:
     QString getMark() const;
 
     ///   Метод, возвращающий длину
-    double getLenght() const;
+    int getLenght() const;
 
     ///   Метод, возвращающий ширину
-    double getWidth() const;
+    int getWidth() const;
 
     ///   Метод, возвращающий вес
     double getWeight() const;
