@@ -57,13 +57,14 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1030, 600);
+        MainWindow->resize(800, 500);
         QSizePolicy sizePolicy(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
         MainWindow->setSizePolicy(sizePolicy);
-        MainWindow->setMinimumSize(QSize(950, 250));
+        MainWindow->setMinimumSize(QSize(800, 500));
+        MainWindow->setMaximumSize(QSize(800, 500));
         actionRussian = new QAction(MainWindow);
         actionRussian->setObjectName("actionRussian");
         actionEnglish = new QAction(MainWindow);
@@ -107,6 +108,8 @@ public:
         verticalLayout->setObjectName("verticalLayout");
         tableView = new QTableView(centralwidget);
         tableView->setObjectName("tableView");
+        sizePolicy.setHeightForWidth(tableView->sizePolicy().hasHeightForWidth());
+        tableView->setSizePolicy(sizePolicy);
         tableView->setEditTriggers(QAbstractItemView::EditTrigger::AnyKeyPressed|QAbstractItemView::EditTrigger::DoubleClicked|QAbstractItemView::EditTrigger::EditKeyPressed);
         tableView->setDragDropOverwriteMode(false);
         tableView->setDragDropMode(QAbstractItemView::DragDropMode::NoDragDrop);
@@ -121,7 +124,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1030, 25));
+        menubar->setGeometry(QRect(0, 0, 800, 25));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName("menuFile");
         menuLanguage = new QMenu(menubar);

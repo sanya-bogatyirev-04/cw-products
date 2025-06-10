@@ -15,12 +15,12 @@
     </message>
     <message>
         <location filename="../authorAbout.ui" line="72"/>
-        <source>Created by</source>
+        <source>Completed by</source>
         <translation>Создано</translation>
     </message>
     <message>
         <location filename="../authorAbout.ui" line="87"/>
-        <source>Bogatyirev Aleksandr Dmitryevich ICTMS 2-6</source>
+        <source>ICTMS 2-6 Bogatyirev Aleksandr Dmitryevich</source>
         <translation>Богатырёвым Александром Дмитриевичем ИЦТМС 2-6</translation>
     </message>
 </context>

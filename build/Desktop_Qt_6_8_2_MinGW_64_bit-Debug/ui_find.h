@@ -39,12 +39,14 @@ public:
     {
         if (Find->objectName().isEmpty())
             Find->setObjectName("Find");
-        Find->resize(789, 189);
+        Find->resize(600, 150);
         QSizePolicy sizePolicy(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(Find->sizePolicy().hasHeightForWidth());
         Find->setSizePolicy(sizePolicy);
+        Find->setMinimumSize(QSize(600, 150));
+        Find->setMaximumSize(QSize(600, 150));
         verticalLayout = new QVBoxLayout(Find);
         verticalLayout->setObjectName("verticalLayout");
         gridLayout = new QGridLayout();
