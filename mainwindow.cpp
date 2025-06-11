@@ -63,11 +63,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tableView->setItemDelegateForColumn(8, date);
 }
 
-// void MainWindow::on_actionFind_triggered()
-// {
-//     find->setupStaticColumns();
-//     find->show();
-// }
 
 void MainWindow::setDefaultHeadersSizes()
 {
