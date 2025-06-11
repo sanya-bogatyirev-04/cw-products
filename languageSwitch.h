@@ -2,14 +2,13 @@
 #define LANGUAGESWITCH_H
 
 #include "mainwindow.h"
-
 #include <QTranslator>
 
 class MainWindow;
 
 /**
- *   LanguageSwitch
- *   Собственный класс переводчика
+ * @brief Класс для управления переводами интерфейса
+ * @details Реализует паттерн Singleton для централизованного управления локализацией
  */
 class LanguageSwitch: public QObject
 {
@@ -17,74 +16,65 @@ class LanguageSwitch: public QObject
 
 public:
     /**
-     *   Метод, дающий доступ к единственному объекту класса.
-     *   возвращает единственный экземпляр класса LanguageSwitch.
+     * @brief Возвращает единственный экземпляр класса
+     * @return Указатель на экземпляр LanguageSwitch
      */
     static LanguageSwitch* GetInstance();
 
 private:
-   ///   Ссылка на единственный объект класса
-   static LanguageSwitch* instance;
-
-   ///   Список ссылок на все открые главные окна приложения
-   QList<MainWindow*> mainWindowList;
-
-   ///   Ссылка на переводчик кастомных тектов
-   QTranslator* appTranslator = new QTranslator;
-
-    ///   Ссылка на переводчик системных тектов
-   QTranslator* qtTranslator = new QTranslator;
-
-   ///   Строка, хранящая текущий выбранный язык
-   QString language = "";
+    static LanguageSwitch* instance; ///< Единственный экземпляр класса
+    QList<MainWindow*> mainWindowList; ///< Список главных окон приложения
+    QTranslator* appTranslator = new QTranslator; ///< Переводчик кастомных текстов
+    QTranslator* qtTranslator = new QTranslator; ///< Переводчик системных текстов
+    QString language = ""; ///< Текущий язык интерфейса
 
 protected:
-   /**
-    *   Конструктор по умолччанию
-    */
-   LanguageSwitch(){};
+    /**
+     * @brief Конструктор по умолчанию
+     */
+    LanguageSwitch(){};
 
 public:
-   /**
-    *   Метод, добавляющий ссылку на главное окно в список ссылкок на главные окна
-    *   window ссылка на окно котороое нужно добавить
-    */
-   void append(MainWindow* window);
+    /**
+     * @brief Добавляет главное окно в список
+     * @param window Указатель на главное окно
+     */
+    void append(MainWindow* window);
 
-   /**
-    *   Метод, удаляющий ссылку на главное окно из списка ссылкок на главные окна
-    *   window ссылка на окно котороое нужно удалить
-    */
-   void pop(MainWindow* window);
+    /**
+     * @brief Удаляет главное окно из списка
+     * @param window Указатель на главное окно
+     */
+    void pop(MainWindow* window);
 
-   /**
-    *   Метод, переводящий все окна в приложении на выбранный язык
-    */
-   void translateAll();
+    /**
+     * @brief Переводит все окна приложения
+     */
+    void translateAll();
 
-   /**
-    *   Метод, устанавлювающий новый кастомный переводчик в приложение
-    *   locale язык, который нужно загрузить
-    */
-   void loadAppTranslator(QString locale);
+    /**
+     * @brief Загружает кастомный переводчик
+     * @param locale Язык для перевода
+     */
+    void loadAppTranslator(QString locale);
 
-   /**
-    *   Метод, устанавливающий системный переводчик в приложении
-    *   locale язык, который нужно загрузить
-    */
-   void loadQtTranslator(QString locale);
+    /**
+     * @brief Загружает системный переводчик
+     * @param locale Язык для перевода
+     */
+    void loadQtTranslator(QString locale);
 
-   /**
-    *   Метод, устанавливающий системный язык
-    *   locale язык, который нужно записать как новый выбранный
-    */
-   void setAppLanguage(QString locale);
+    /**
+     * @brief Устанавливает язык приложения
+     * @param locale Язык интерфейса
+     */
+    void setAppLanguage(QString locale);
 
-   /**
-    *   Метод, возвращающий текущий системный язык
-    *   Строка, содержащая информацию о текущем системном языке
-    */
-   QString getAppLanguage();
+    /**
+     * @brief Возвращает текущий язык приложения
+     * @return Текущий язык
+     */
+    QString getAppLanguage();
 };
 
 #endif // LANGUAGESWITCH_H

@@ -4,158 +4,194 @@
 #include <QString>
 
 /**
- *   Data
- *   Хранит информацию об отдельной записи в таблице
+ * @brief Класс для хранения данных одной записи таблицы
+ * @details Содержит информацию о строительных изделиях: марку, размеры, вес, дату производства и др.
  */
 class Data
 {
 private:
-    ///   Хранит ID
-    unsigned int id;
-
-    ///   Хранит название
-    QString name;
-
-    ///   Хранит тип изделия
-    QString type;
-
-    ///   Хранит марки изделий
-    QString mark;
-
-    ///   Хранит длину
-    double length;
-
-    ///   Хранит ширину
-    double  width;
-
-    ///   Хранит вес одного изделия
-    double weight;
-
-    ///   Хранит тип арматуры
-    QString fittings;
-
-    ///   Хранит дату изготовления
-    QString date;
+    unsigned int id;      ///< Уникальный идентификатор записи
+    QString name;         ///< Наименование изделия
+    QString type;         ///< Тип изделия
+    QString mark;         ///< Марка изделия
+    double length;        ///< Длина изделия (в метрах)
+    double width;         ///< Ширина изделия (в метрах)
+    double weight;        ///< Вес изделия (в кг)
+    QString fittings;     ///< Тип арматуры
+    QString date;         ///< Дата производства (в формате "dd.MM.yyyy")
 
 public:
     /**
-     *    Конструктор по умолчанию
-     *    Создает пустую запись
+     * @brief Конструктор по умолчанию
+     * @details Создает пустую запись с нулевыми значениями.
      */
     Data();
 
-    ///   Конструктор с заранее определенными параметрами
+    /**
+     * @brief Конструктор с параметрами
+     * @param id Идентификатор записи
+     * @param name Наименование изделия
+     * @param type Тип изделия
+     * @param mark Марка изделия
+     * @param length Длина изделия
+     * @param width Ширина изделия
+     * @param weight Вес изделия
+     * @param fittings Тип арматуры
+     * @param date Дата производства
+     */
     Data(int id,
-                QString &name,
-                QString &type,
-                QString &mark,
-                int length,
-                int width,
-                double weight,
-                QString &fittings,
-                QString &date);
-    ///   Конструктор копирования
-    Data(const Data&other);
-
-    ///   Конструктор из строки
-    Data(QString splitLine);
-
-    ///   Перегрузка оператора присваивания
-    Data &operator=(const Data&other);
+         QString &name,
+         QString &type,
+         QString &mark,
+         int length,
+         int width,
+         double weight,
+         QString &fittings,
+         QString &date);
 
     /**
-     *   Метод для получения информации о записи в формате строки
-     *  Строка c информацией о записи, столбцы разделены точкой с запятой
+     * @brief Конструктор копирования
+     * @param other Объект для копирования
+     */
+    Data(const Data &other);
+
+    /**
+     * @brief Конструктор из строки
+     * @details Разбирает строку формата "id;name;type;...;date" на поля класса.
+     * @param splitLine Входная строка данных
+     */
+    Data(QString splitLine);
+
+    /**
+     * @brief Перегрузка оператора присваивания
+     * @param other Объект для копирования
+     * @return Ссылка на текущий объект
+     */
+    Data &operator=(const Data &other);
+
+    /**
+     * @brief Преобразует данные в строку
+     * @details Формат: "id;name;type;...;date"
+     * @return Строка с данными, разделенными точкой с запятой
      */
     QString getSplitString();
 
-    ///   Деструктор по умолчанию
+    /// @brief Деструктор (по умолчанию)
     ~Data();
 
     /**
-     *   Метод, устанавливающий код записи
-     *   id код записи
+     * @brief Устанавливает идентификатор записи
+     * @param id Новый идентификатор
      */
     void setID(const int id);
 
     /**
-     *   Метод, устанавливающий название
-     *   name название
+     * @brief Устанавливает наименование изделия
+     * @param name Новое наименование
      */
     void setName(const QString &name);
 
     /**
-     *   Метод, устанавливающий тип изделия
-     *   type тип изделия
+     * @brief Устанавливает тип изделия
+     * @param type Новый тип
      */
     void setType(const QString &type);
 
     /**
-     *   Метод, устанавливающий марку изделия
-     *   mark марка изделия
+     * @brief Устанавливает марку изделия
+     * @param mark Новая марка
      */
     void setMark(const QString &mark);
 
     /**
-     *   Метод, устанавливающий длину
-     *   length длина
+     * @brief Устанавливает длину изделия
+     * @param length Новая длина
      */
     void setLength(const int length);
 
     /**
-     *   Метод, устанавливающий ширину
-     *   width ширина
+     * @brief Устанавливает ширину изделия
+     * @param width Новая ширина
      */
     void setWidth(const int width);
 
-
     /**
-     *   Метод, устанавливающий вес
-     *   weight вес
+     * @brief Устанавливает вес изделия
+     * @param weight Новый вес
      */
     void setWeight(const double weight);
 
-
     /**
-     *   Метод, устанавливающий тип арматуры
-     *   fittings тип арматуры
+     * @brief Устанавливает тип арматуры
+     * @param fittings Новый тип арматуры
      */
     void setFittings(const QString &fittings);
 
     /**
-     *   Метод, устанавливающий дату производста
-     *   date дата производства
+     * @brief Устанавливает дату производства
+     * @param date Новая дата
      */
     void setDate(const QString &date);
 
-    ///   Метод, возвращающий код записи
+    /**
+     * @brief Возвращает идентификатор записи
+     * @return Текущий идентификатор
+     */
     int getID() const;
 
-    ///   Метод, возвращающий название
+    /**
+     * @brief Возвращает наименование изделия
+     * @return Текущее наименование
+     */
     QString getName() const;
 
-    ///   Метод, возвращающий тип изделия
+    /**
+     * @brief Возвращает тип изделия
+     * @return Текущий тип
+     */
     QString getType() const;
 
-    ///   Метод, возвращающий марку изделия
+    /**
+     * @brief Возвращает марку изделия
+     * @return Текущая марка
+     */
     QString getMark() const;
 
-    ///   Метод, возвращающий длину
+    /**
+     * @brief Возвращает длину изделия
+     * @return Текущая длина
+     */
     int getLenght() const;
 
-    ///   Метод, возвращающий ширину
+    /**
+     * @brief Возвращает ширину изделия
+     * @return Текущая ширина
+     */
     int getWidth() const;
 
-    ///   Метод, возвращающий вес
+    /**
+     * @brief Возвращает вес изделия
+     * @return Текущий вес
+     */
     double getWeight() const;
 
-    ///   Метод, возвращающий тип арматуры
+    /**
+     * @brief Возвращает тип арматуры
+     * @return Текущий тип арматуры
+     */
     QString getFittings() const;
 
-    ///   Метод, возвращающий дату производства
+    /**
+     * @brief Возвращает дату производства
+     * @return Текущая дата
+     */
     QString getDate() const;
 
-    ///   Метод, проверяющий пустая ли запись
+    /**
+     * @brief Проверяет, является ли запись пустой
+     * @return true, если запись пуста, иначе false
+     */
     bool isEmpty();
 };
+
 #endif // DATA_HPP

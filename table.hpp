@@ -7,99 +7,112 @@
 #include <QMimeData>
 
 /**
- *   MyTableModel
- *    Собственная реализация класса QAbstractTableModel.
- *   Отвечает за работу tableView.
+ * @brief Кастомная модель таблицы
+ * @details Наследует QAbstractTableModel и предоставляет функциональность
+ *          для работы с табличными данными строительных изделий.
  */
 class MyTableModel : public QAbstractTableModel
 {
     Q_OBJECT
 
-    ///    Кол-во столбцов
-    const int columnsNum;
-
-    ///    Список данных для строк в таблице
-    QList<Data> DataModelList;
+    const int columnsNum;     ///< Количество столбцов в таблице
+    QList<Data> DataModelList; ///< Список данных таблицы
 
 signals:
-    ///    Сигнал о прошедших изменениях данных в таблице
+    /**
+     * @brief Сигнал об изменении данных в модели
+     */
     void modelDataChanged();
 
 public:
-    ///    Контструктор по умолчанию
+    /**
+     * @brief Конструктор модели
+     * @param parent Родительский объект
+     */
     explicit MyTableModel(QObject *parent = nullptr);
 
-    ///    Метод, возвращающий кол-во строк в модели
+    /**
+     * @brief Возвращает количество строк
+     * @param parent Индекс родителя
+     * @return Количество строк в модели
+     */
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    ///    Метод, возвращающий кол-во столбиков в модели
+    /**
+     * @brief Возвращает количество столбцов
+     * @param parent Индекс родителя
+     * @return Количество столбцов в модели
+     */
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
     /**
-     *   Метод, возвращающий обработанные данные для отображения в таблице
-     *   index Индекс ячейки в модели.
-     *   role Роль (отображение, редактирование и тд).
-     *   пустой QVariant, или данные для отображения
+     * @brief Возвращает данные для отображения
+     * @param index Индекс ячейки
+     * @param role Роль данных
+     * @return Данные в формате QVariant
      */
     QVariant data(const QModelIndex &index, int role) const override;
 
     /**
-     *   Метод, возвращающий набор флагов ячейки
-     *   index Индекс ячейки в модели.
-     *   Набор активных флагов (параметров) ячейки
+     * @brief Возвращает флаги ячейки
+     * @param index Индекс ячейки
+     * @return Флаги ячейки
      */
     Qt::ItemFlags flags(const QModelIndex &index) const override;
 
     /**
-     *   Метод, обновлящий данные в списке, после взаимодейсвтвия с ними через tableView
-     *   index Индекс ячейки в таблице.
-     *   value Значение, которое требуется установить
-     *   role Роль (отображение, редактирование и тд.).
-     *   успешно ли прошла установка данных
+     * @brief Устанавливает данные в модель
+     * @param index Индекс ячейки
+     * @param value Новое значение
+     * @param role Роль данных
+     * @return Успешность операции
      */
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
     /**
-     *   Метод, возвращает сформированный заголовок
-     *   section Столбец в таблице.
-     *   orientation Ориентация (для определения строка/столбец).
-     *   role Роль (отображение, редактирование и тд.). По умолчанию DisplayRole.
-     *   Сформированный заголовок.
+     * @brief Возвращает данные заголовка
+     * @param section Секция заголовка
+     * @param orientation Ориентация заголовка
+     * @param role Роль данных
+     * @return Данные заголовка
      */
     QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
 
     /**
-     *   Метод, добавляющий новую строку в список данных.
-     *   value Объект класса DataElement, по умолчанию пустой.
-     *   bool Запись добавлена успешно.
+     * @brief Добавляет новую строку
+     * @param value Данные для добавления
+     * @return Успешность операции
      */
     bool appendRow(const Data &value = Data());
 
     /**
-     *   Метод, удалияющий строку из списка данных.
-     *   position Номер удаляемой строки.
-     *   bool Запись удалена успешно.
+     * @brief Удаляет строку
+     * @param position Позиция строки
+     * @return Успешность операции
      */
     bool removeRow(const int position);
 
     /**
-     *   Метод для получения записи из таблицы.
-     *   DataElement данные.
+     * @brief Возвращает данные из таблицы
+     * @param row Номер строки
+     * @return Объект Data с данными строки
      */
-    Data getDataFromTable(int);
+    Data getDataFromTable(int row);
 
-    ///    Очищает таблицу.
-    void dropTable();
     /**
-     *   Метод, перезаписывающий данные в заданной строке.
-     *   row Строка, в которую нужно перезаписать данные.
-     *   value DataElement, на который нужно сделать замену.
+     * @brief Очищает таблицу
+     */
+    void dropTable();
+
+    /**
+     * @brief Перезаписывает данные в строке
+     * @param row Номер строки
+     * @param value Новые данные
      */
     void overWriteData(int row, const Data &value = Data());
 
     /**
-     *   Метод, обновляющий заголовки столбцов.
-     *   Уведомляет QTableView о необходимости перерисовки заголовков.
+     * @brief Обновляет заголовки столбцов
      */
     void updateHeaders();
 };

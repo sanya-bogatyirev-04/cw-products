@@ -8,26 +8,35 @@ class AuthorAbout;
 }
 
 /**
- * AuthorAbout
- * Класс отображения интерфейса для с информацией об авторе
+ * @brief Класс диалогового окна "Об авторе"
+ * @details Отображает информацию об авторе и предоставляет кнопку для закрытия окна.
  */
-class AuthorAbout: public QDialog
+class AuthorAbout : public QDialog
 {
     Q_OBJECT
 
 public:
-    /// Конструктор по умолчанию
+    /**
+     * @brief Конструктор класса AuthorAbout
+     * @param parent Родительский виджет (по умолчанию nullptr)
+     */
     explicit AuthorAbout(QWidget *parent = nullptr);
 
-    /// Деструктор по умолчанию
+    /**
+     * @brief Деструктор класса AuthorAbout
+     * @details Освобождает ресурсы, связанные с пользовательским интерфейсом.
+     */
     ~AuthorAbout();
 
 private slots:
-    /// Слот, обрабатывающий нажатие на кнопку "закрыть"
+    /**
+     * @brief Слот для обработки нажатия кнопки "OK"
+     * @details Закрывает текущее диалоговое окно.
+     */
     void on_okButton_clicked();
 
 private:
-    /// Ссылка на интерфейс окна
+    /// Указатель на сгенерированный интерфейс окна
     Ui::AuthorAbout *ui;
 };
 
